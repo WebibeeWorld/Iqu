@@ -1,9 +1,14 @@
 // NAVIGATION
 export const NAV_LINKS = [
   { href: '/', key: 'home', label: 'Home' },
-  { href: '/', key: 'how_hilink_work', label: 'How Hilink Work?' },
-  { href: '/', key: 'services', label: 'Services' },
-  { href: '/', key: 'pricing ', label: 'Pricing ' },
+  { href: '/', key: 'pricing ', label: 'Testimonial ' },
+  { href: '/', key: 'about', label: 'About Us' },
+  { href: '/', key: 'therapy', label: 'Types of Therapy' },
+  { href: '/', key: 'pricing ', label: 'Gallery ' },
+  { href: '/', key: 'pricing ', label: 'Meet the team ' },
+  { href: '/', key: 'pricing ', label: 'Packages ' },
+  { href: '/', key: 'pricing ', label: 'Diagnosis ' },
+
   { href: '/', key: 'contact_us', label: 'Contact Us' },
 ];
 
@@ -14,8 +19,22 @@ export const PEOPLE_URL = [
   '/person-3.png',
   '/person-4.png',
 ];
-
-// FEATURES SECTION
+  // TESTIMONIALS
+  export const lists = [
+    {title: "Io Akhmad", country: "USA", img : "/person-1.png", para : "I received a Masterpiece from Adi. He literally went above and beyond with building my first dropshipping store. He took care of products integration, descriptions etc and also provided me the video ads which are a banger!"},
+    {title: "Duca Denman", country: "Canada", img : "/person-2.png", para : "I've been fortunate to find Adi. So fast, a good communicator, understand perfect your needs and deliver without hesitation. We will work together again. Thank you!"},
+    {title: "Lewis Barnie", country: "Brasil", img : "/person-3.png", para : "webibee's work for Vaaradhi Farms is priceless – it's brought immense success and cleared all our doubts. If you want a top-notch website and guidance, Aditya is the way to go!"},
+    {title: "Vishal Punamiya", country: "UAE", img : "/person-2.png", para : "I received a Masterpiece from Adi. He literally went above and beyond with building my first dropshipping store. He took care of products integration, descriptions etc and also provided me the video ads which are a banger!"},
+    {title: "George", country: "India", img : "/person-1.png", para : "It was super easy to work with Aditya, very communicative, and I look forward to working with him again! Thanks, Aditya."},
+    {title: "Gustav Richard", country: "Germany", img : "/person-3.png", para : "Sellar Service! Adi revamped my whole site, added products that can boost sales and increased my conversion rate without a doubt! 11/10 from me!"}
+  ]
+// TEAM
+export const team=[
+  {name:"Prithvi",img:"/avatar-1.jpg", designation:"Founder",passion:"We don't just build websites, we build websites that SELLS"},
+  {name:"Gokul Gandhi",img:"/avatar-3.jpg",designation:"FullStack Developer",passion:"Great web design without functionality is like a sports car with no engine"},
+  {name:"Satyajeet",img:"/avatar-1.jpg",designation:"FullStack Developer",passion:"Getting a quality website is not an expense but rather an investment"}
+]
+  // FEATURES SECTION
 export const FEATURES = [
   {
     title: 'Real maps can be offline',
@@ -60,10 +79,6 @@ export const FOOTER_LINKS = [
       'Contact Us',
     ],
   },
-  {
-    title: 'Our Community',
-    links: ['Climbing xixixi', 'Hiking hilink', 'Hilink kinthill'],
-  },
 ];
 
 export const FOOTER_CONTACT_INFO = {
@@ -84,3 +99,17 @@ export const SOCIALS = {
     '/wordpress.svg',
   ],
 };
+  // Contact Us
+  export const services=[
+    {label:"Service 1", value:"Service 1"},
+    {label:"Service 2", value:"Service 2"},
+    {label:"Service 3", value:"Service 3"},
+    {label:"Service 4", value:"Service 4"},
+  ]
+  
+  export const about=[
+    {label:"Media 1", value:"Media 1"},
+    {label:"Media 2", value:"Media 2"},
+    {label:"Media 3", value:"Media 3"},
+    {label:"Media 4", value:"Media 4"},
+  ]

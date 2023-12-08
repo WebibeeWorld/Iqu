@@ -9,9 +9,10 @@ module.exports = {
     extend: {
       colors: {
         green: {
-          50: '#30AF5B',
+          50: '#4a7c43',
           90: '#292C27',
         },
+
         gray: {
           10: '#EEEEEE',
           20: '#A2A2A2',
@@ -19,16 +20,22 @@ module.exports = {
           50: '#585858',
           90: '#141414',
         },
-        orange: {
-          50: '#FF814C',
-        },
         blue: {
-          70: '#021639',
+          70: '#000262',
         },
-        yellow: {
-          50: '#FEC601',
+        pink: {
+          50: '#d41788',
         },
       },
+      keyframes: {
+        marquee_h: {
+          from: { transform: 'translateX(0%)' },
+          to: { transform: 'translateX(calc(-100% - 1rem))' }
+        },
+      },
+      animation: {
+        horizontal_carousel: 'marquee_h 40s linear infinite',
+        },
       backgroundImage: {
         'bg-img-1': "url('/img-1.png')",
         'bg-img-2': "url('/img-2.png')",

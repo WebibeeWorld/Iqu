@@ -1,17 +1,26 @@
-import Camp from "@/components/Camp";
-import Features from "@/components/Features";
-import GetApp from "@/components/GetApp";
-import Guide from "@/components/Guide";
+import GetApp from "@/components/Contact";
 import Hero from "@/components/Hero";
+import Testimonials from "@/components/Testimonials";
+import Gallery from "@/components/Gallery";
+import AboutUs from "@/components/About";
+import TherapyTypes from "@/components/TherapyTypes";
+import Diagnosis from "@/components/Diagnosis";
+import Team from "@/components/Team";
+import Contact from "@/components/Contact";
+import Package from "@/components/Package";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Camp />
-      <Guide />
-      <Features />
-      <GetApp />
+      <Testimonials />
+      <AboutUs />
+      <TherapyTypes />
+      <Gallery />
+      <Team />
+      <Package />
+      <Diagnosis />
+      <Contact />
     </>
-  )
+  );
 }

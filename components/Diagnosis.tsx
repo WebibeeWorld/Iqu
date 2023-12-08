@@ -2,7 +2,7 @@ import { FEATURES } from '@/constants'
 import Image from 'next/image'
 import React from 'react'
 
-const Features = () => {
+const Diagnosis = () => {
   return (
     <section className="flex-col flexCenter overflow-hidden bg-feature-bg bg-center bg-no-repeat py-24">
       <div className="max-container padding-container relative w-full flex justify-end">
@@ -25,7 +25,7 @@ const Features = () => {
               height={50}
               className="absolute left-[-5px] top-[-28px] w-10 lg:w-[50px]"
             />
-            <h2 className="bold-40 lg:bold-64">Our Features</h2>
+            <h2 className="bold-40 lg:bold-64">Diagnosis</h2>
           </div>
           <ul className="mt-10 grid gap-10 md:grid-cols-2 lg:mg-20 lg:gap-20">
             {FEATURES.map((feature) => (
@@ -65,4 +65,4 @@ const FeatureItem = ({ title, icon, description }: FeatureItem) => {
   )
 }
 
-export default Features
+export default Diagnosis
