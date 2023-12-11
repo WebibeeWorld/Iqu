@@ -1,4 +1,3 @@
-import GetApp from "@/components/Contact";
 import Hero from "@/components/Hero";
 import Testimonials from "@/components/Testimonials";
 import Gallery from "@/components/Gallery";

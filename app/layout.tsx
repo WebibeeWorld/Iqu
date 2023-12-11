@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
-
+import { Providers } from "./provider";
 import './globals.css'
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Header from '@/components/Navbar';
+import { NextUIProvider } from '@nextui-org/react';
 
 export const metadata: Metadata = {
-  title: 'Travel',
-  description: 'Travel UI/UX App for Camping',
+  title: 'IQU Clinic',
+  description: 'Therapy & Counseling Center',
 }
 
 export default function RootLayout({
@@ -16,12 +17,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <Navbar />
+      <body className='font-lora'>
+        <Providers>
+        <Header />
         <main className="relative overflow-hidden">
           {children}
         </main>
         <Footer />
+        </Providers>
+
       </body>
     </html>
   )
