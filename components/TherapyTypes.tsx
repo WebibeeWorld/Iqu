@@ -1,10 +1,12 @@
+"use client"
 import { FEATURES } from '@/constants'
 import Image from 'next/image'
 import React from 'react'
+import { Element } from 'react-scroll'
 
 const TherapyTypes = () => {
   return (
-    <section className="flex-col flexCenter overflow-hidden bg-feature-bg bg-center bg-no-repeat py-24">
+    <Element className="flex-col flexCenter overflow-hidden bg-feature-bg bg-center bg-no-repeat py-24" name="therapy">
       <div className="max-container padding-container relative w-full flex justify-end">
         <div className="flex flex-1 lg:min-h-[900px]">
           <Image
@@ -39,7 +41,7 @@ const TherapyTypes = () => {
           </ul>
         </div>
       </div>
-    </section>
+    </Element>
   )
 }
 

@@ -4,8 +4,8 @@ import Image from "next/image"
 // import Link from "next/link"
 // import Button from "./Button"
 import React from "react";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenuItem, NavbarMenu} from "@nextui-org/react";
-
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Button, NavbarMenuToggle, NavbarMenuItem, NavbarMenu} from "@nextui-org/react";
+import { Link } from "react-scroll";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -30,9 +30,9 @@ export default function Header() {
           className="sm:hidden"
         />
         <NavbarBrand>
-        <Link href="/">
+        <a href="/">
       <Image src="/logo.png" alt="logo"width={200} height={60} />
-       </Link>
+       </a>
         </NavbarBrand>
       </NavbarContent>
 
@@ -40,12 +40,16 @@ export default function Header() {
       {NAV_LINKS.slice(0,4).map((item, index) => (
           <NavbarItem key={`${item}-${index}`}>
             <Link
+               to={item.key}
+               spy={true}
+               offset={-50}
+               smooth={true}
+               duration={500}
+               className="btn capitalize cursor-pointer w-full"
+               key={index}
               color={
                 index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
               }
-              className="w-full"
-              href={item.href}
-              size="lg"
             >
               {item.label}
             </Link>
@@ -58,12 +62,19 @@ export default function Header() {
         {NAV_LINKS.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
-              color={
-                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
-              }
-              className="w-full"
-              href={item.href}
-              size="lg"
+                     to={item.key}
+                     spy={true}
+                     offset={-50}
+                     smooth={true}
+                     duration={500}
+                     className="btn capitalize "
+                     key={index}
+              // color={
+              //   index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
+              // }
+              // className="w-full"
+              // href={item.href}
+              // size="lg"
             >
               {item.label}
             </Link>

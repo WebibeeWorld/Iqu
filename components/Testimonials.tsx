@@ -1,10 +1,12 @@
+"use client"
 import { lists } from "@/constants/index";
 import Image from "next/image";
+import { Element } from "react-scroll";
 
 
 export default function Testimonials() {
   return (
-    <section className="py-6 md:py-10" id="Testimonial">
+    <Element className="py-6 md:py-10" name="testimonial" >
       <div className="py-10 mx-auto">
         <h2 className="bold-40 lg:bold-64  text-center">
           Customer Testimonials
@@ -61,13 +63,13 @@ export default function Testimonials() {
               <div className="flex gap-3">
                 <Image
                   alt="nextui logo"
-                  height={40}
+                  height={10}
                 //   radius="sm"
                   src={list.img}
-                  width={40}
+                  width={10}
                 />
                 <div className="flex flex-col text-white">
-                  <p className="text-xl md:text-2xl font-header"><strong>{list.title}</strong></p>
+                  <p className="text-md md:text-lg font-header"><strong>{list.title}</strong></p>
                   {/* <p className="text-sm text-default-500">{list.country}</p> */}
                 </div>
               </div>
@@ -79,6 +81,6 @@ export default function Testimonials() {
           ))}
         </div>
       </div>
-    </section>
+    </Element>
   );
 }

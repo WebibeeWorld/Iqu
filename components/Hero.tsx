@@ -1,9 +1,10 @@
+"use client"
 import Image from 'next/image'
 import Button from './Button'
-
+import { Element } from 'react-scroll'
 const Hero = () => {
   return (
-    <section className="relative h-screen" >
+    <Element className="relative h-screen" name="hero">
    <Image
         src={'/img-1.png'}
         alt="Home image"
@@ -52,7 +53,7 @@ const Hero = () => {
         />
    </div>
       </form>
-    </section>
+    </Element>
   )
 }
 

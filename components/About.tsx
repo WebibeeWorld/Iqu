@@ -1,9 +1,11 @@
+"use client"
 import Image from 'next/image'
 import React from 'react'
+import { Element } from 'react-scroll'
 
 const AboutUs = () => {
   return (
-    <section className="flexCenter flex-col">
+    <Element className="flexCenter flex-col" name="about">
       <div className="padding-container max-container w-full pb-24">
         <Image src="/camp.svg" alt="camp" width={50} height={50} />
         <p className="uppercase regular-18 -mt-1 mb-3 text-green-50">
@@ -48,7 +50,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Element>
   )
 }
 
