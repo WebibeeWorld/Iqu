@@ -19,11 +19,11 @@ export default function Contact() {
           <h2 className="font-header text-5xl md:text-7xl text-center text-black">
             Contact Us
           </h2>
-    
         </div>
         <form
           action="https://public.herotofu.com/v1/f14b0b40-a9a1-11ee-8fa9-872d80d8eac1"
-          method="post" accept-charset="UTF-8"
+          method="post"
+          accept-charset="UTF-8"
           className="space-y-5 bg-zinc-100 py-10 px-3 rounded-lg"
         >
           <Input
@@ -44,14 +44,7 @@ export default function Contact() {
             color="primary"
             variant={"bordered"}
           />
-          <Input
-            isRequired
-            type="text"
-            label="Company Name"
-            className="max-w-lg"
-            color="primary"
-            variant={"bordered"}
-          />
+          <Button type="submit">Enquire</Button>
         </form>
       </div>
     </section>
