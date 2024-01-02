@@ -22,14 +22,15 @@ export default function Contact() {
     
         </div>
         <form
-          action=""
-          method="POST"
+          action="https://public.herotofu.com/v1/f14b0b40-a9a1-11ee-8fa9-872d80d8eac1"
+          method="post" accept-charset="UTF-8"
           className="space-y-5 bg-zinc-100 py-10 px-3 rounded-lg"
         >
           <Input
             isRequired
             type="email"
             label="Email"
+            name="email"
             className="max-w-lg"
             color="primary"
             variant={"bordered"}
@@ -38,6 +39,7 @@ export default function Contact() {
             isRequired
             type="text"
             label="Number"
+            name="number"
             className="max-w-lg"
             color="primary"
             variant={"bordered"}
@@ -50,46 +52,6 @@ export default function Contact() {
             color="primary"
             variant={"bordered"}
           />
-          <Select
-            isRequired
-            label="What service do you require? "
-            placeholder="Select an Service"
-            defaultSelectedKeys={["Service 1"]}
-            className="max-w-lg"
-            color="primary"
-            variant={"bordered"}
-          >
-            {services.map((service) => (
-              <SelectItem key={service.value} value={service.value}>
-                {service.label}
-              </SelectItem>
-            ))}
-          </Select>
-          <Select
-            isRequired
-            label="Where did you hear about webibee?"
-            placeholder="Select an Media"
-            defaultSelectedKeys={["Media 1"]}
-            className="max-w-lg"
-            color="primary"
-            variant={"bordered"}
-          >
-            {about.map((item) => (
-              <SelectItem key={item.value} value={item.value}>
-                {item.label}
-              </SelectItem>
-            ))}
-          </Select>
-          <RadioGroup
-            label="Do you need help with your brand identity?"
-            orientation="horizontal"
-            defaultValue="Yes"
-            color="primary"
-            className="max-w-lg ml-2 mb-5"
-          >
-            <Radio value="Yes">Yes</Radio>
-            <Radio value="No">No</Radio>
-          </RadioGroup>
         </form>
       </div>
     </section>
