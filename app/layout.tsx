@@ -3,8 +3,8 @@ import { Providers } from "./provider";
 import './globals.css'
 import Footer from '@/components/Footer';
 import Header from '@/components/Navbar';
-import { NextUIProvider } from '@nextui-org/react';
-
+import FloatingButton from '@/components/FloatingButton';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 export const metadata: Metadata = {
   title: 'IQU Clinic',
   description: 'Therapy & Counseling Center',
@@ -23,6 +23,7 @@ export default function RootLayout({
         <main className="relative overflow-hidden">
           {children}
         </main>
+        <FloatingButton />
         <Footer />
         </Providers>
 

@@ -19,7 +19,7 @@ const AboutUs = () => {
 
       <div className="flexCenter max-container relative w-full">
         <Image 
-          src="/boat.png"
+          src={"/therapy3.jpg"}
           alt="boat"
           width={1440}
           height={580}

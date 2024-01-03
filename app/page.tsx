@@ -7,6 +7,7 @@ import Diagnosis from "@/components/Diagnosis";
 import Team from "@/components/Team";
 import Contact from "@/components/Contact";
 import Package from "@/components/Package";
+import GallerySlider from "@/components/GallerySlider";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <AboutUs />
       <TherapyTypes />
       <Gallery />
+      <GallerySlider/>
       <Team />
       <Package />
       <Diagnosis />

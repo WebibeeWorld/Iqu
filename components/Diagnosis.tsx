@@ -1,14 +1,14 @@
 import { FEATURES } from '@/constants'
 import Image from 'next/image'
 import React from 'react'
-
+import Link from 'next/link'
 const Diagnosis = () => {
   return (
     <section className="flex-col flexCenter overflow-hidden bg-feature-bg bg-center bg-no-repeat py-24">
       <div className="max-container padding-container relative w-full flex justify-end">
         <div className="flex flex-1 lg:min-h-[900px]">
           <Image
-            src="/phone.png"
+           src="/therapy4.gif"
             alt="phone"
             width={440}
             height={1000}
@@ -34,6 +34,7 @@ const Diagnosis = () => {
                 title={feature.title} 
                 icon={feature.icon}
                 description={feature.description}
+                slug={feature.slug}
               />
             ))}
           </ul>
@@ -47,10 +48,12 @@ type FeatureItem = {
   title: string;
   icon: string;
   description: string;
+  slug:string;
 }
 
-const FeatureItem = ({ title, icon, description }: FeatureItem) => {
+const FeatureItem = ({ title, icon, description,slug }: FeatureItem) => {
   return (
+    <Link href={`/details/${slug}`}>
     <li className="flex w-full flex-1 flex-col items-start">
       <div className="rounded-full p-4 lg:p-7 bg-green-50">
         <Image src={icon} alt="map" width={28} height={28} />
@@ -62,6 +65,7 @@ const FeatureItem = ({ title, icon, description }: FeatureItem) => {
         {description}
       </p>
     </li>
+    </Link>
   )
 }
 

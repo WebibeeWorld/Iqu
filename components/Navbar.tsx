@@ -36,7 +36,7 @@ export default function Header() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex " justify="center">
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
       {NAV_LINKS.slice(0,4).map((item, index) => (
           <NavbarItem key={`${item}-${index}`}>
             <Link
@@ -55,7 +55,18 @@ export default function Header() {
             </Link>
           </NavbarItem>
         ))}
-  
+                 <Link
+               to={"contact_us"}
+               spy={true}
+               offset={-50}
+               smooth={true}
+               duration={500}
+          
+            >
+  <button
+  className={`flexCenter gap-3 rounded-full border bg-green-800 px-4 py-2 text-white ml-8`}
+  >Contact</button>
+  </Link>
       </NavbarContent>
 
       <NavbarMenu>

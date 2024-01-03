@@ -44,8 +44,8 @@ module.exports = {
         horizontal_carousel: 'marquee_h 40s linear infinite',
         },
       backgroundImage: {
-        'bg-img-1': "url('/img-1.png')",
-        'bg-img-2': "url('/img-2.png')",
+        'bg-img-1': "url('/therapy3.jpg')",
+        'bg-img-2': "url('/therapy3.jpg')",
         'feature-bg': "url('/feature-bg.png')",
         pattern: "url('/pattern.png')",
         'pattern-2': "url('/pattern-bg.png')",

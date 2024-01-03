@@ -1,12 +1,12 @@
-"use client"
-import Image from 'next/image'
-import Button from './Button'
-import { Element } from 'react-scroll'
+"use client";
+import Image from "next/image";
+import Button from "./Button";
+import { Element, Link } from "react-scroll";
 const Hero = () => {
   return (
     <Element className="relative h-screen" name="hero">
-   <Image
-        src={'/img-1.png'}
+      <Image
+        src={"/therapy1.jpg"}
         alt="Home image"
         className="h-[100vh] object-cover object-center w-screen"
         fill
@@ -17,12 +17,15 @@ const Hero = () => {
         {/* <h3 className="text-3xl md:text-4xl font-bold leading-normal text-[#800000]">
           N9 Power Services
         </h3> */}
-   <div>
-    <div>
-        <h4 className="text-start text-xl font-bold  text-primary-50 leading-snug text-blue-70">
-        <span className="text-pink-50 font-bold  text-2xl ">IQU Clinic</span>- You Deserve A Better Life
-        </h4>
-         {/* <div className="flex gap-1 mt-2">
+        <div>
+          <div>
+            <h4 className="text-start text-xl font-bold  leading-snug text-blue-70">
+              <span className="text-pink-50 font-bold  text-2xl ">
+                IQU Clinic
+              </span>
+              - You Deserve A Better Life
+            </h4>
+            {/* <div className="flex gap-1 mt-2">
             <SlLocationPin
               size={20}
               className="text-slate-500 hover:scale-110 hover:text-primary-50 cursor-pointer"
@@ -31,30 +34,34 @@ const Hero = () => {
               Chennai
             </h4>
           </div> */}
+          </div>
         </div>
-        </div>
-        <p className="text-md md:text-xl">
-        A Counseling And Therapy Center
-
-        
-        </p>
-        <div className='flex gap-2'> 
-        <Button 
-          type="button"
-          title="Directions"
-          icon=""
-          variant="btn_green"
-        />
-             <Button 
+        <p className="text-md md:text-xl">A Counseling And Therapy Center</p>
+        <div className="flex gap-2">
+          <Link
+            to={"direction"}
+            spy={true}
+            offset={-50}
+            smooth={true}
+            duration={500}
+          >
+            <Button
+              type="button"
+              title="Directions"
+              icon=""
+              variant="btn_green"
+            />
+            {/* <Button 
           type="button"
           title="Contact Us"
           icon=""
           variant="btn_green"
-        />
-   </div>
+        /> */}
+          </Link>
+        </div>
       </form>
     </Element>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

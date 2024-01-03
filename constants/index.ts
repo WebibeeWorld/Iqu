@@ -8,8 +8,8 @@ export const NAV_LINKS = [
   { href: '/', key: 'pricing ', label: 'Meet the team ' },
   { href: '/', key: 'pricing ', label: 'Packages ' },
   { href: '/', key: 'pricing ', label: 'Diagnosis ' },
-
   { href: '/', key: 'contact_us', label: 'Contact Us' },
+
 ];
 
 // CAMP SECTION
@@ -37,30 +37,37 @@ export const team=[
   // FEATURES SECTION
 export const FEATURES = [
   {
-    title: 'Real maps can be offline',
+    title: 'Diagnosis',
     icon: '/map.svg',
     variant: 'green',
+    slug:'diagnosis1',
     description:
       'We provide a solution for you to be able to use our application when climbing, yes offline maps you can use at any time there is no signal at the location',
   },
   {
-    title: 'Set an adventure schedule',
+    title: 'Diagnosis',
     icon: '/calendar.svg',
     variant: 'green',
+    slug:'diagnosis2',
+
     description:
       "Schedule an adventure with friends. On holidays, there are many interesting offers from Hilink. That way, there's no more discussion",
   },
   {
-    title: 'Technology using augment reality',
+    title: 'Diagnosis',
     icon: '/tech.svg',
     variant: 'green',
+    slug:'diagnosis3',
+
     description:
       'Technology uses augmented reality as a guide to your hiking trail in the forest to the top of the mountain. Already supported by the latest technology without an internet connection',
   },
   {
-    title: 'Many new locations every month',
+    title: 'Diagnosis',
     icon: '/location.svg',
     variant: 'orange',
+    slug:'diagnosis4',
+
     description:
       'Lots of new locations every month, because we have a worldwide community of climbers who share their best experiences with climbing',
   },
