@@ -1,13 +1,15 @@
 "use client"
+import { lists } from '@/constants'
 import Image from 'next/image'
 import React from 'react'
 import { Element } from 'react-scroll'
+import CardSection from './Card'
 
 const AboutUs = () => {
   return (
     <Element className="flexCenter flex-col" name="about">
       <div className="padding-container max-container w-full pb-24">
-        <Image src="/camp.svg" alt="camp" width={50} height={50} />
+        {/* <Image src="/camp.svg" alt="camp" width={50} height={50} /> */}
         <p className="uppercase regular-18 -mt-1 mb-3 text-green-50">
           We are here for you
         </p>
@@ -16,8 +18,14 @@ const AboutUs = () => {
           <p className="regular-16 text-gray-30 xl:max-w-[520px]">Only with the hilink application you will no longer get lost and get lost again, because we already support offline maps when there is no internet connection in the field. Invite your friends, relatives and friends to have fun in the wilderness through the valley and reach the top of the mountain</p>
         </div>
       </div>
-
-      <div className="flexCenter max-container relative w-full">
+      <div className="w-full h-full overflow-hidden flex gap-4 ">
+        <div className="py-10 flex justify-around  gap-4 animate-horizontal_carousel">
+          {lists.map((list, idx) => (
+            <CardSection list={list} key={idx}/>
+          ))}
+        </div>
+      </div>
+      {/* <div className="flexCenter max-container relative w-full">
         <Image 
           src={"/therapy3.jpg"}
           alt="boat"
@@ -49,7 +57,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </Element>
   )
 }

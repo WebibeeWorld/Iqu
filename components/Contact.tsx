@@ -26,7 +26,7 @@ export default function Contact() {
         <form
           action="https://public.herotofu.com/v1/f14b0b40-a9a1-11ee-8fa9-872d80d8eac1"
           method="post"
-          accept-charset="UTF-8"
+          acceptCharset="UTF-8"
           className="space-y-5 bg-zinc-100 py-10 px-3 rounded-lg"
         >
           <Input
