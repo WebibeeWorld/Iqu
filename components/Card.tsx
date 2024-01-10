@@ -9,8 +9,7 @@ import {
 import React from "react";
 
 const CardSection = ({
-  list,
-  idx,
+  list
 }: {
   list: { title: string; country: string; img: string; para: string };
 }) => {
