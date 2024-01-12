@@ -31,8 +31,8 @@ module.exports = {
         },
       },
       fontFamily: {
-      lora: ['Lora', 'serif'],
-        urbanist: ['Urbanist', 'sans-serif'],
+        Lato: ['var(--font-lato)'],
+        Montserrat: ['var(--font-montserrat)'],
       },
       keyframes: {
         marquee_h: {

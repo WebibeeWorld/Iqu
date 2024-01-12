@@ -1,26 +1,24 @@
 import Hero from "@/components/Hero";
 import Testimonials from "@/components/Testimonials";
-import Gallery from "@/components/Gallery";
-import AboutUs from "@/components/About";
-import TherapyTypes from "@/components/TherapyTypes";
-import Diagnosis from "@/components/Diagnosis";
 import Team from "@/components/Team";
 import Contact from "@/components/Contact";
-import Package from "@/components/Package";
-import GallerySlider from "@/components/GallerySlider";
+import CounsellingServices from "@/components/CounsellingServices";
+import Therapy from "@/components/Therapy";
+import Mission_vision from "@/components/Mission_vision";
+import KnowMore from "@/components/KnowMore";
+import FAQ from "@/components/FAQ";
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <CounsellingServices />
       <Testimonials />
-      <AboutUs />
-      <TherapyTypes />
-      <Gallery />
-      <GallerySlider/>
+      <Therapy />
       <Team />
-      <Package />
-      <Diagnosis />
+      <Mission_vision />
+      <KnowMore />
+      <FAQ />
       <Contact />
     </>
   );
