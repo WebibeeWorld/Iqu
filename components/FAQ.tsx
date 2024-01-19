@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 const FAQ = () => {
@@ -7,13 +7,12 @@ const FAQ = () => {
       <h3 className="capitalize text-3xl  w-full mx-auto tracking-wide font-Montserrat font-bold text-center p-4">
         FAQ
       </h3>
-      <div className="w-full md:w-1/2 mx-auto">
+      <div className="w-full">
         <Accordion variant="splitted">
           <AccordionItem
             key="1"
             aria-label="Accordion 1"
-            title="What types of therapy do you offer?
-"
+            title="What types of therapy do you offer?"
           >
             {
               "We provide a range of therapeutic services tailored to meet individual needs. Our experienced therapists offer psychotherapy, cognitive-behavioral therapy (CBT), dialectical behavior therapy (DBT), and mindfulness-based approaches. We believe in a personalized approach to address various mental health concerns.*"

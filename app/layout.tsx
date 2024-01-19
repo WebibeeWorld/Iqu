@@ -1,47 +1,48 @@
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 import { Providers } from "./provider";
-import './globals.css'
-import Footer from '@/components/Footer';
-import Header from '@/components/Navbar';
-import FloatingButton from '@/components/FloatingButton';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
-import { Lato, Montserrat } from 'next/font/google'
+import "./globals.css";
+import Footer from "@/components/Footer";
+import Header from "@/components/Navbar";
+import FloatingButton from "@/components/FloatingButton";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Lato, Montserrat } from "next/font/google";
+import { ExitModal } from "@/components/ExitModal";
+import Contact from "@/components/Contact";
 export const metadata: Metadata = {
-  title: 'IQU Clinic',
-  description: 'Therapy & Counseling Center',
-}
+  title: "IQU Clinic",
+  description: "Therapy & Counseling Center",
+};
 
 const montserrat = Montserrat({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-montserrat',
-})
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-montserrat",
+});
 
 const lato = Lato({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-lato',
-  weight: "400"
-})
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-lato",
+  weight: "400",
+});
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" className={`${lato.variable} ${montserrat.variable}`}>
-      <body className='font-lora'>
+      <body className="font-lora">
         <Providers>
-        <Header />
-        <main className="relative overflow-hidden">
-          {children}
-        </main>
-        <FloatingButton />
-        <Footer />
+          <ExitModal />
+          <Header />
+          <main className="relative overflow-hidden">{children}</main>
+          <FloatingButton />
+          <Contact />
+          <Footer />
         </Providers>
-
       </body>
     </html>
-  )
+  );
 }

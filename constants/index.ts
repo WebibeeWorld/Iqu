@@ -12,6 +12,37 @@ export const NAV_LINKS = [
 
 ];
 
+// TYPES OF THEARPY
+export const thearpies =[
+  "Reactive Attachment Disorder",
+  "Dissociative Disorders",
+  "Dissociative Amnesia Forgetfulness",
+  "Dissociative Identity Disorder",
+  "Dissociative Amnesia Forgetfulness",
+  "Somatic Symptom Disorder",
+  "Illness Anxiety Disorder",
+  "Conversion Disorder",
+  "Factitious Disorder",
+  "Reactive Attachment Disorder",
+  "Dissociative Disorders",
+  "Dissociative Amnesia Forgetfulness",
+  "Dissociative Identity Disorder",
+  "Dissociative Amnesia Forgetfulness",
+  "Somatic Symptom Disorder",
+  "Illness Anxiety Disorder",
+  "Conversion Disorder",
+  "Factitious Disorder",
+  "Reactive Attachment Disorder",
+  "Dissociative Disorders",
+  "Dissociative Amnesia Forgetfulness",
+  "Dissociative Identity Disorder",
+  "Dissociative Amnesia Forgetfulness",
+  "Somatic Symptom Disorder",
+  "Illness Anxiety Disorder",
+  "Conversion Disorder",
+  "Factitious Disorder",
+]
+
 // CAMP SECTION
 export const PEOPLE_URL = [
   '/person-1.png',

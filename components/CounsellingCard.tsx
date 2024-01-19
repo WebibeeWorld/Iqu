@@ -6,8 +6,10 @@ import {
   CardFooter,
   Button,
 } from "@nextui-org/react";
+import { useRouter } from "next/navigation";
 
 const CounsellingCard = () => {
+  const router = useRouter()
   return (
     <Card className="max-w-[320px] max-h-fit md:!max-w-md p-3 first:ms-5"> 
       <CardHeader>
@@ -23,7 +25,7 @@ const CounsellingCard = () => {
         </ul>
       </CardBody>
       <CardFooter className="gap-3">
-        <Button radius="full"color="primary" className="capitalize font-lato text-base">Know More</Button>
+        <Button radius="full"color="primary" className="capitalize font-lato text-base" onClick={()=>router.push("/services/1")}>Know More</Button>
       </CardFooter>
     </Card>
   );

@@ -5,6 +5,7 @@ import { FaPhoneVolume } from "react-icons/fa6";
 
 export default function Contact() {
   return (
+    <>
     <section className="p-6 md:p-10 lg:p-[60px] space-y-4">
       <h3 className="capitalize text-3xl  w-full mx-auto tracking-wide font-Montserrat font-bold text-center p-4">
         Contact Us
@@ -40,7 +41,8 @@ export default function Contact() {
           <h4>9876543212 OR 9876543212</h4>
         </div>
         </div>
-      <div >
+        </section>
+      <div className="w-screen h-full">
         <h4 className="font-Montserrat text-lg font-bold bg-blue-500 flex items-center gap-3 p-3 justify-center">
           <span>
             <FaMagnifyingGlassLocation className="w-7 h-7"/>
@@ -57,6 +59,6 @@ export default function Contact() {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-    </section>
+    </>
   );
 }

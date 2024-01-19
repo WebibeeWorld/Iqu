@@ -1,10 +1,9 @@
 "use client";
-import { team } from "@/constants/index";
-import { Card, CardFooter, Image, Button, Tooltip } from "@nextui-org/react";
-import CounsellingCard from "./CounsellingCard";
+
 import TeamCard from "./TeamCard";
 import Marquee from "react-fast-marquee";
-// import { MdFavoriteBorder } from "react-icons/md";
+import TeamHeadCard from "./TeamHeadCard";
+
 
 export default function Team() {
   return (
@@ -13,9 +12,12 @@ export default function Team() {
         Meet The Team
       </h3>
       <div className="space-y-3">
-        <h4 className="capitalize text-xl w-full mx-auto tracking-wide font-Montserrat font-bold text-center">
+        {/* <h4 className="capitalize text-xl w-full mx-auto tracking-wide font-Montserrat font-bold text-center">
           About
-        </h4>
+        </h4> */}
+        <div className="w-full flex justify-center items-center">
+        <TeamHeadCard/>
+        </div>
         <p className="font-Lato text-base tracking-tight text-justify">
           At IQU, we believe that every individual possesses the strength to
           overcome life's challenges and find their path to happiness. Our team
