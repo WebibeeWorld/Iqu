@@ -5,14 +5,13 @@ import {
   ModalHeader,
   ModalBody,
   ModalFooter,
-  Button,
   useDisclosure,
   Input,
+  Button,
 } from "@nextui-org/react";
-import { useEffect, useState } from "react";
-import { AiOutlineClose } from "react-icons/ai";
+import { useEffect } from "react";
 import { useExitIntent } from "use-exit-intent";
-export const ExitModal = () => {
+const ExitModal = () => {
   const { isOpen, onOpenChange } = useDisclosure();
   // const [isOpen, setIsOpen] = useState(false)
   const { registerHandler } = useExitIntent({
@@ -21,13 +20,12 @@ export const ExitModal = () => {
       useBeforeUnload: false,
       triggerOnMouseLeave: true,
       delayInSecondsToTrigger: 10,
-      // "delayInSecondsToTrigger": 20
     },
-    mobile: {
-      delayInSecondsToTrigger: 5,
-      // "delayInSecondsToTrigger": 8,
-      triggerOnIdle: true,
-    },
+    // mobile: {
+    //   delayInSecondsToTrigger: 5,
+    //   // "delayInSecondsToTrigger": 8,
+    //   triggerOnIdle: true,
+    // },
   });
 
   // leave back logic
@@ -46,26 +44,27 @@ export const ExitModal = () => {
         radius="lg"
         classNames={{
           wrapper:"!flex !justify-center !items-center",
-          body: "py-6",
-          backdrop: "bg-[#292f46]/50 backdrop-opacity-40",
-          base: "border-[#292f46] bg-[#19172c] dark:bg-[#19172c] text-[#a8b0d3]",
-          header: "border-b-[1px] border-[#292f46] w-full",
-          footer: "border-t-[1px] border-[#292f46] w-full",
-          closeButton: "mt-2 hover:bg-white/5 active:bg-white/10 text-white",
+          backdrop: "bg-primary/50 backdrop-opacity-40",
+          base: "text-white bg-primary",
+          body: "!py-1",
+          header: "w-full ",
+          footer: "w-full",
+          closeButton: "mt-3.5 mx-2.5 hover:text-red-500 hover:bg-white/5 active:bg-white/10 text-white",
         }}
       >
         <ModalContent>
-            <ModalHeader className="flex flex-col justify-center items-center gap-5">
+            <ModalHeader className="flex  justify-center items-center font-Montserrat font-bold text-[26px]">
               Thanks for visiting IQU
             </ModalHeader>
             <ModalBody>
-              <form className="space-y-5 w-full mx-auto">
+              <form className="w-full mx-auto h-full">
                 <Input
-                  variant="bordered"
+                  // variant="bordered"
                   type="email"
                   label="Email"
                   labelPlacement={"outside"}
                   placeholder="Enter your email"
+                  className="font-Lato font-normal text-base md:text-lg placeholder:text-zinc-400 bg-white text-black overflow-hidden  rounded-full"
                 />
               </form>
             </ModalBody>
@@ -73,12 +72,14 @@ export const ExitModal = () => {
               {/* <Button color="primary" variant="light" onPress={onClose}>
                   Close
                 </Button> */}
-              <p className="font-Lato text-lg">
-                Subscribe to newsletter about therapy
-              </p>
+              <Button color="success" size="lg" radius="full" className="font-Lato font-semibold text-white text-lg">
+                Subscribe
+              </Button>
             </ModalFooter>
         </ModalContent>
       </Modal>
     </>
   );
 };
+
+export default ExitModal

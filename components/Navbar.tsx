@@ -9,54 +9,41 @@ import {
   NavbarMenuToggle,
   NavbarMenuItem,
   NavbarMenu,
+  Image,
 } from "@nextui-org/react";
 import { Link as MyLink } from "react-scroll";
 import Link from "next/link";
-import { MdContactPhone } from "react-icons/md";
 import { FaMapLocationDot } from "react-icons/fa6";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
-  ];
-
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="full">
+    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="full" className="bg-warning bg-opacity-50">
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
         <NavbarBrand>
-          <div className="flex justify-between items-end w-full gap-4">
-            {/* <Link href="/" className="relative h-10 w-10 md:h-20 md:w-20">
-            <Image src="/logo.png" alt="logo" width={200} height={60} />
-          </Link> */}
-            <h3 className="font-lora text-lg md:text-2xl">IQU Clinic</h3>
-            <div className="flex items-center gap-4">
-              <Link href={"/"}>
+          <div className="flex justify-between items-center w-full gap-4">
+            <Link href="/" className="flex items-center gap-3">
+            <Image src="/logo.png" alt="logo" width={40} height={40} />
+            <h3 className="block md:hidden lg:block font-Montserrat font-bold text-lg lg:text-2xl">IQU Clinic</h3>
+            </Link>
+            {/* <div className="flex items-center gap-4"> */}
+              {/* <Link href={"/"}>
                 <MdContactPhone className="h-7 w-7 block md:hidden" />
-              </Link>
+              </Link> */}
               <Link href={"/"}>
                 <FaMapLocationDot className="h-7 w-7 block md:hidden" />
               </Link>
-            </div>
+            {/* </div> */}
           </div>
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        {NAV_LINKS.slice(0, 4).map((item, index) => (
+      <NavbarContent className="hidden md:flex gap-4 lg:gap-5 xl:gap-10" justify="center">
+        {NAV_LINKS.map((item, index) => (
           <NavbarItem key={`${item}-${index}`}>
             <MyLink
               to={item.key}
@@ -64,89 +51,41 @@ export default function Header() {
               offset={-50}
               smooth={true}
               duration={500}
-              className="btn capitalize cursor-pointer w-full"
+              className="btn capitalize cursor-pointer w-full font-Lato font-medium md:text-base lg:text-lg xl:text-xl hover:opacity-60"
               key={index}
-              color={
-                index === 2
-                  ? "primary"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
             >
               {item.label}
             </MyLink>
           </NavbarItem>
         ))}
         <MyLink
-          to={"contact_us"}
+          to={"enquire"}
           spy={true}
           offset={-50}
           smooth={true}
           duration={500}
         >
           <button
-            className={`flexCenter gap-3 rounded-full border bg-green-800 px-4 py-2 text-white ml-8`}
+            className={`flexCenter gap-3 rounded-full bg-secondary px-5 py-3 text-black font-Lato font-semibold ml-8 hover:bg-opacity-80`}
           >
-            Contact
+            Enquire
           </button>
         </MyLink>
       </NavbarContent>
 
       <NavbarMenu>
-        {NAV_LINKS.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <MyLink
-              to={item.key}
-              spy={true}
-              offset={-50}
-              smooth={true}
-              duration={500}
-              className="btn capitalize cursor-pointer"
-              key={index}
-              // color={
-              //   index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
-              // }
-              // className="w-full"
-              // href={item.href}
-              // size="lg"
+        {/* {NAV_LINKS.map((item, index) => ( */}
+          <NavbarMenuItem>
+            <Link
+              href={"/typesoftherapy"}
             >
-              {item.label}
-            </MyLink>
+              <h4 className="btn capitalize cursor-pointer font-Lato font-semibold text-lg"
+              onClick={()=>setIsMenuOpen(false)}>
+              Types of Therapy
+              </h4>
+            </Link>
           </NavbarMenuItem>
-        ))}
       </NavbarMenu>
     </Navbar>
   );
 }
-
-// const Navbar = () => {
-//   return (
-//     <nav className="flexBetween max-container padding-container relative z-30 py-5">
-//       <Link href="/">
-//         <Image src="/logo.png" alt="logo"width={200} height={60} />
-//       </Link>
-
-//       <ul className="hidden h-full gap-12 lg:flex">
-//         {NAV_LINKS.map((link) => (
-//           <Link href={link.href} key={link.key} className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold">
-//             {link.label}
-//           </Link>
-//         ))}
-//       </ul>
-
-// <MobileMenu/>
-
-//       {/* <Image
-//         src="menu.svg"
-//         alt="menu"
-//         width={32}
-//         height={32}
-//         className="inline-block cursor-pointer lg:hidden"
-//       /> */}
-
-//     </nav>
-//   )
-// }
-
-// export default Navbar

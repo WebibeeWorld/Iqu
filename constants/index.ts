@@ -1,15 +1,10 @@
 // NAVIGATION
 export const NAV_LINKS = [
-  { href: '/', key: 'hero', label: 'Home' },
+  { href: '/', key: 'services', label: 'services' },
   { href: '/', key: 'testimonial', label: 'Testimonial ' },
-  { href: '/', key: 'about', label: 'About Us' },
+  { href: '/', key: 'BOT', label: 'Benefits Of Therapy Us' },
   { href: '/', key: 'therapy', label: 'Types of Therapy' },
-  { href: '/', key: 'pricing ', label: 'Gallery ' },
-  { href: '/', key: 'pricing ', label: 'Meet the team ' },
-  { href: '/', key: 'pricing ', label: 'Packages ' },
-  { href: '/', key: 'pricing ', label: 'Diagnosis ' },
-  { href: '/', key: 'contact_us', label: 'Contact Us' },
-
+  { href: '/', key: 'FAQ', label: 'FAQ' },
 ];
 
 // TYPES OF THEARPY
@@ -41,6 +36,9 @@ export const thearpies =[
   "Illness Anxiety Disorder",
   "Conversion Disorder",
   "Factitious Disorder",
+  "Reactive Attachment Disorder",
+  "Dissociative Disorders",
+  "Dissociative Amnesia Forgetfulness",
 ]
 
 // CAMP SECTION

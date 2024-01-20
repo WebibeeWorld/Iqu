@@ -1,10 +1,11 @@
 "use client";
 import React from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
+import { Element } from "react-scroll";
 const FAQ = () => {
   return (
-    <section className="p-6 md:p-10 lg:p-[60px] space-y-4">
-      <h3 className="capitalize text-3xl  w-full mx-auto tracking-wide font-Montserrat font-bold text-center p-4">
+    <Element className="p-6 md:p-10 lg:p-[60px] space-y-4" name="FAQ">
+      <h3 className="capitalize text-3xl md:text-5xl w-full mx-auto tracking-wide font-Montserrat font-bold text-center p-4">
         FAQ
       </h3>
       <div className="w-full">
@@ -29,7 +30,7 @@ const FAQ = () => {
           </AccordionItem>
         </Accordion>
       </div>
-    </section>
+    </Element>
   );
 };
 

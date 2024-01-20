@@ -11,9 +11,9 @@ import { useRouter } from "next/navigation";
 const CounsellingCard = () => {
   const router = useRouter()
   return (
-    <Card className="max-w-[320px] max-h-fit md:!max-w-md p-3 first:ms-5"> 
+    <Card className="max-w-[300px] max-h-fit md:!max-w-md p-3 first:ms-5 bg-primary text-white"> 
       <CardHeader>
-        <h4 className="text-xl md:text-3xl font-semibold leading-none text-default-600 font-Montserrat">
+        <h4 className="text-lg md:text-xl font-semibold leading-none font-Montserrat">
           Family Counselling
         </h4>
       </CardHeader>
@@ -25,7 +25,7 @@ const CounsellingCard = () => {
         </ul>
       </CardBody>
       <CardFooter className="gap-3">
-        <Button radius="full"color="primary" className="capitalize font-lato text-base" onClick={()=>router.push("/services/1")}>Know More</Button>
+        <Button radius="full" color="success" className="capitalize font-lato text-base text-white font-semibold" onClick={()=>router.push("/services/1")}>Know More</Button>
       </CardFooter>
     </Card>
   );

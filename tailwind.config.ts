@@ -63,5 +63,16 @@ module.exports = {
       },
     },
   },
-  plugins: [nextui()],
+  plugins: [nextui({
+    themes: {
+      light: {
+        colors: {
+          primary: "#9544c3",
+          secondary: "#f9e062",
+          success :"#466f3a",
+          warning : "#8adbfb",
+        }
+      },
+    },
+  }),]
 };

@@ -2,27 +2,43 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FaFacebook, FaInstagramSquare } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { Link as MyLink } from "react-scroll";
+
+const NavLink = [
+  {label:"Home", href: "/"},
+  {label:"Types of Therapy", href: "/typesoftherapy"},
+]
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="p-6 md:p-10 lg:p-[60px] space-y-4">
-      <div className="">
-        <div className="flex items-center justify-between gap-5">
-          <div className="space-y-2  mb-2">
+      <div className="space-y-5">
+        <div className="flex flex-col justify-center items-center gap-2">
+          {/* <div className="space-y-2 mb-2"> */}
             <Link href="/" className="flex items-center gap-2">
-              <Image src="/logo.png" alt="logo" width={150} height={150} />
+              <Image src="/logo.png" alt="logo" width={40} height={40} />
               <h4 className="font-Montserrat text-lg font-bold">IQU Clinic</h4>
             </Link>
             <div className="flex items-center gap-2 justify-center">
-              <FaInstagramSquare className="w-7 h-7 text-blue-900" />
-              <FaFacebook className="w-7 h-7 text-blue-900" />
+              <FaInstagram className="w-7 h-7 text-primary cursor-pointer hover:opacity-60" />
+              <FaFacebookF className="w-7 h-7 text-primary cursor-pointer hover:opacity-60" />
             </div>
-          </div>
-          <div className="font-Lato font-semibold text-base block capitalize">
-            <h5>about</h5>
-            <h5>book consultation</h5>
+          {/* </div> */}
+
+          <div className="font-Lato font-semibold text-base flex justify-center items-center gap-5 capitalize ">
+            {NavLink.map((link,idx)=>(
+              <MyLink
+              to={link.href}
+              spy={true}
+              offset={-50}
+              smooth={true}
+              duration={500}
+              className="capitalize cursor-pointer w-max font-Lato font-semibold md:text-base lg:text-xl hover:opacity-60"
+              key={idx}
+            >{link.label}</MyLink>
+            ))}
           </div>
         </div>
 

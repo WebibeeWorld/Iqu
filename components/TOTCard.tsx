@@ -22,7 +22,7 @@ export const TOTCard = ({ type,index }: { type: string,index : number }) => {
     <motion.div variants={variants} initial="initial" whileInView="animate" custom={index} viewport={{once : true}}>
     <Card className="w-full md:w-[280px] rounded-md p-1.5">
       <CardHeader className="justify-between ">
-        <div className="flex items-center  gap-4">
+        <div className="flex items-center gap-4">
           {/* <TherapyIcon className={"w-10 h-10"} /> */}
           {/* <Avatar
             radius="full"

@@ -6,8 +6,10 @@ import Header from "@/components/Navbar";
 import FloatingButton from "@/components/FloatingButton";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Lato, Montserrat } from "next/font/google";
-import { ExitModal } from "@/components/ExitModal";
+// import ExitModal  from "@/components/ExitModal";
+const ExitModalComponent = dynamic(() => import('@/components/ExitModal') as any,{ssr:false})
 import Contact from "@/components/Contact";
+import dynamic from "next/dynamic";
 export const metadata: Metadata = {
   title: "IQU Clinic",
   description: "Therapy & Counseling Center",
@@ -35,7 +37,7 @@ export default function RootLayout({
     <html lang="en" className={`${lato.variable} ${montserrat.variable}`}>
       <body className="font-lora">
         <Providers>
-          <ExitModal />
+          <ExitModalComponent />
           <Header />
           <main className="relative overflow-hidden">{children}</main>
           <FloatingButton />

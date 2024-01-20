@@ -10,9 +10,9 @@ const Therapy = () => {
   return (
     <Element
       className="overflow-hidden p-6 md:p-10 lg:p-[60px] space-y-4"
-      name="therapy"
+      name="BOT"
     >
-      <h3 className=" capitalize text-3xl  w-full mx-auto tracking-wide font-Montserrat font-bold text-center p-4">
+      <h3 className=" capitalize text-3xl md:text-5xl w-full mx-auto tracking-wide font-Montserrat font-bold text-center p-4">
         Benefits of Therapy
       </h3>
       <div className="flex flex-col-reverse md:grid grid-cols-2 gap-5">
