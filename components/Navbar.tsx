@@ -2,7 +2,6 @@
 import { NAV_LINKS } from "@/constants";
 import React from "react";
 import {
-  Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
@@ -10,6 +9,7 @@ import {
   NavbarMenuItem,
   NavbarMenu,
   Image,
+  Navbar,
 } from "@nextui-org/react";
 import { Link as MyLink } from "react-scroll";
 import Link from "next/link";
@@ -18,7 +18,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="full" className="bg-warning bg-opacity-50">
+    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="full" position="sticky">
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -66,7 +66,7 @@ export default function Header() {
           duration={500}
         >
           <button
-            className={`flexCenter gap-3 rounded-full bg-secondary px-5 py-3 text-black font-Lato font-semibold ml-8 hover:bg-opacity-80`}
+            className={`flexCenter gap-3 rounded-full bg-secondary px-3 py-2 lg:px-5 lg:py-3 text-black font-Lato font-semibold hover:bg-opacity-80 text-base lg:text-lg`}
           >
             Enquire
           </button>
@@ -75,11 +75,11 @@ export default function Header() {
 
       <NavbarMenu>
         {/* {NAV_LINKS.map((item, index) => ( */}
-          <NavbarMenuItem>
+          <NavbarMenuItem className="ms-14 mt-10">
             <Link
               href={"/typesoftherapy"}
             >
-              <h4 className="btn capitalize cursor-pointer font-Lato font-semibold text-lg"
+              <h4 className="btn capitalize cursor-pointer font-Lato font-semibold text-lg hover:opacity-50"
               onClick={()=>setIsMenuOpen(false)}>
               Types of Therapy
               </h4>

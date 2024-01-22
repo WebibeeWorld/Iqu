@@ -2,14 +2,18 @@ import type { Metadata } from "next";
 import { Providers } from "./provider";
 import "./globals.css";
 import Footer from "@/components/Footer";
-import Header from "@/components/Navbar";
 import FloatingButton from "@/components/FloatingButton";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Lato, Montserrat } from "next/font/google";
-// import ExitModal  from "@/components/ExitModal";
-const ExitModalComponent = dynamic(() => import('@/components/ExitModal') as any,{ssr:false})
+const ExitModalComponent = dynamic(
+  () => import("@/components/ExitModal") as any,
+  { ssr: false }
+);
 import Contact from "@/components/Contact";
 import dynamic from "next/dynamic";
+import FAQ from "@/components/FAQ";
+import DefaultNavbvar from "@/components/DefaultNavbvar";
+
 export const metadata: Metadata = {
   title: "IQU Clinic",
   description: "Therapy & Counseling Center",
@@ -38,9 +42,10 @@ export default function RootLayout({
       <body className="font-lora">
         <Providers>
           <ExitModalComponent />
-          <Header />
+          <DefaultNavbvar />
           <main className="relative overflow-hidden">{children}</main>
           <FloatingButton />
+          <FAQ />
           <Contact />
           <Footer />
         </Providers>

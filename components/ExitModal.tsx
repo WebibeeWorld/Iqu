@@ -44,7 +44,7 @@ const ExitModal = () => {
         radius="lg"
         classNames={{
           wrapper:"!flex !justify-center !items-center",
-          backdrop: "bg-primary/50 backdrop-opacity-40",
+          backdrop: "bg-white/90 backdrop-opacity-40",
           base: "text-white bg-primary",
           body: "!py-1",
           header: "w-full ",
@@ -69,9 +69,6 @@ const ExitModal = () => {
               </form>
             </ModalBody>
             <ModalFooter className="justify-center items-center">
-              {/* <Button color="primary" variant="light" onPress={onClose}>
-                  Close
-                </Button> */}
               <Button color="success" size="lg" radius="full" className="font-Lato font-semibold text-white text-lg">
                 Subscribe
               </Button>

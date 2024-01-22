@@ -5,7 +5,6 @@ import CounsellingServices from "@/components/CounsellingServices";
 import Therapy from "@/components/Therapy";
 import Mission_vision from "@/components/Mission_vision";
 import KnowMore from "@/components/KnowMore";
-import FAQ from "@/components/FAQ";
 import { TOT } from "@/components/TOT";
 
 export default function Home() {
@@ -15,11 +14,10 @@ export default function Home() {
       <CounsellingServices />
       <Testimonials />
       <Therapy />
-      <TOT/>
+      <TOT />
       <Team />
       <Mission_vision />
       <KnowMore />
-      <FAQ />
     </>
   );
 }
