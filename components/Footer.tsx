@@ -16,14 +16,14 @@ const Footer = () => {
     <footer className="p-6 md:p-10 lg:p-[60px] space-y-4">
       <div className="space-y-5">
         <div className="flex flex-col justify-center items-center gap-4">
-          <div className="mb-2 mx-auto">
+          <div className="mx-auto">
           <Link href="/" className="flex items-center gap-2">
             <Image src="/logo.png" alt="logo" width={40} height={40} />
             <h4 className="font-Montserrat text-lg lg:text-2xl font-bold">IQU Clinic</h4>
           </Link>
-          <div className="flex items-center gap-2 justify-center">
-            <FaInstagram className="w-7 h-7 text-primary cursor-pointer hover:opacity-60" />
-            <FaFacebookF className="w-7 h-7 text-primary cursor-pointer hover:opacity-60" />
+          <div className="flex items-center gap-2 justify-center mt-1">
+            <FaInstagram className="w-6 h-6 text-primary cursor-pointer hover:opacity-60" />
+            <FaFacebookF className="w-6 h-6 text-primary cursor-pointer hover:opacity-60" />
           </div>
           </div>
 
