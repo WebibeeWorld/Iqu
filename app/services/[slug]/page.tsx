@@ -1,16 +1,31 @@
+import { client } from "@/sanity/lib/client";
+import { urlForImage } from "@/sanity/lib/image";
 import Image from "next/image";
 
-export default function page (){
+async function getServiceSlug(slug : string) {
+  const query = `*[_type == "services" && slug.current == '${slug}']{
+    title,
+  "currentSlug": slug.current,
+   mainDescription,
+    para1,
+    para2,
+    serviceImage  
+  }[0]`;
+  const fetchData = await client.fetch(query);
+  return fetchData;
+}
+export default async function page ({params} :{params :{slug : string}}){
+  const slug = await getServiceSlug(params.slug)
   return (
     <section className="p-6 md:p-10 lg:p-[60px] space-y-3 md:space-y-4 w-full h-full">
       <h3 className="capitalize text-3xl md:text-6xl w-full mx-auto tracking-wide font-Montserrat font-bold text-center">
-        Service Type
+        {slug.title}
       </h3>
       <div className="relative w-full h-[340px] md:h-[540px] rounded-md overflow-hidden mx-auto">
         <Image
           fill
           alt="service image"
-          src={"/therapy2.jpg"}
+          src={urlForImage(slug.serviceImage)}
           className="object-cover object-center"
           sizes="(min-width: 780px) calc(49.1vw - 43px), calc(100vw - 48px)"
           placeholder="blur"
@@ -19,24 +34,15 @@ export default function page (){
       </div>
       <div className="space-y-3 md:space-y-4 font-Lato font-normal tracking-normal leading-relaxed md:text-justify">
         <p>
-          Therapy is a transformative tool that can empower you to navigate
-          life's challenges with resilience and authenticity.
-          Therapy is a transformative tool that can empower you to navigate
-          life's challenges with resilience and authenticity.
+          {slug.mainDescription}
         </p>
         <p>
-          Unlock Inner Strength: Therapy provides a safe space to tap into your
-          resilience and learn effective coping strategies.
-          Unlock Inner Strength: Therapy provides a safe space to tap into your
-          resilience and learn effective coping strategies.
+        {slug.para1}
         </p>
         <p>
-          Gain Clarity: Explore your thoughts and emotions, gaining fresh
-          insights into your life, relationships, and personal patterns.
-          Gain Clarity: Explore your thoughts and emotions, gaining fresh
-          insights into your life, relationships, and personal patterns.
+        {slug.para2}
         </p>
-        <p>
+        {/* <p>
           Improve Relationships: Enhance communication skills, understand your
           needs, and build healthier, more fulfilling connections.
           Improve Relationships: Enhance communication skills, understand your
@@ -49,7 +55,7 @@ export default function page (){
         <p>
           Boost Self-Esteem: Break free from self-doubt, foster self-compassion,
           and build a positive self-image.
-        </p>
+        </p> */}
       </div>
     </section>
   );

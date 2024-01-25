@@ -11,8 +11,8 @@ const ExitModalComponent = dynamic(
 );
 import Contact from "@/components/Contact";
 import dynamic from "next/dynamic";
-import FAQ from "@/components/FAQ";
 import DefaultNavbvar from "@/components/DefaultNavbvar";
+import { FAQServer } from "@/components/layout/FAQServer";
 
 export const metadata: Metadata = {
   title: "IQU Clinic",
@@ -45,7 +45,7 @@ export default function RootLayout({
           <DefaultNavbvar />
           <main className="relative overflow-hidden">{children}</main>
           <FloatingButton />
-          <FAQ />
+          <FAQServer />
           <Contact />
           <Footer />
         </Providers>
