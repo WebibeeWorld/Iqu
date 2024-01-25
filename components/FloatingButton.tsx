@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -10,7 +10,7 @@ export default function FloatingButton() {
       whileHover={{ scale: 1.1 }}
     >
       <a
-        href="https://wa.me/919600520369"
+        href="https://web.whatsapp.com/send?phone=9500021585&text=Hey. I want to schedule a consulation today."
         target="_blank"
         rel="noopener noreferrer"
       >
