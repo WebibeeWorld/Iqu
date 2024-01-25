@@ -4,8 +4,9 @@ import Image from "next/image";
 import { Element } from "react-scroll";
 import CounsellingCard from "./CounsellingCard";
 import Marquee from "react-fast-marquee";
+import { ServiceType } from "@/sanity/lib/type";
 
-const CounsellingServices= () => {
+const CounsellingServices= ({services} : {services : ServiceType[]}) => {
   return (
     <Element className="h-full" name="services" >
       <div className="relative h-full">
@@ -19,11 +20,9 @@ const CounsellingServices= () => {
       <div className="my-5">
         <Marquee pauseOnHover speed={70} autoFill={true}>
         <div className="flex items-center gap-5 py-2">
-          <CounsellingCard />
-          <CounsellingCard />
-          <CounsellingCard />
-          <CounsellingCard />
-          <CounsellingCard />
+          {services.map((service :ServiceType ,idx : number)=>(
+          <CounsellingCard service={service} key={idx}/>
+          ))}
         </div>
           </Marquee>
           </div>

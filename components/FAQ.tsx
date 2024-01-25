@@ -16,7 +16,7 @@ const FAQ = () => {
             title="What types of therapy do you offer?"
           >
             {
-              "We provide a range of therapeutic services tailored to meet individual needs. Our experienced therapists offer psychotherapy, cognitive-behavioral therapy (CBT), dialectical behavior therapy (DBT), and mindfulness-based approaches. We believe in a personalized approach to address various mental health concerns.*"
+              "We provide a range of therapeutic services tailored to meet individual needs. Our experienced therapists offer psychotherapy, cognitive-behavioral therapy (CBT), dialectical behavior therapy (DBT), and mindfulness-based approaches. We believe in a personalized approach to address various mental health concerns."
             }
           </AccordionItem>
           <AccordionItem

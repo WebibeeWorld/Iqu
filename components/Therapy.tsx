@@ -1,26 +1,42 @@
-"use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { Element } from "react-scroll";
 import GallerySlider from "./GallerySlider";
+import { client } from "@/sanity/lib/client";
+import { PortableText } from "@portabletext/react";
 
-const Therapy = () => {
+async function getTherapy() {
+  const query = `*[_type == "therapy"]{
+    content,
+    gallery 
+  }[0]`;
+  const fetchData = await client.fetch(query);
+  return fetchData;
+}
+
+const Therapy = async () => {
+  const therapyData = await getTherapy();
+  
+  // therapyData.map((list:any)=> console.log(list)
+  //   )
   return (
-    <Element
+    <section
       className="overflow-hidden p-6 md:p-10 lg:p-[60px] space-y-4"
-      name="BOT"
+      id="BOT"
     >
       <h3 className=" capitalize text-3xl md:text-5xl w-full mx-auto tracking-wide font-Montserrat font-bold text-center p-4">
         Benefits of Therapy
       </h3>
       <div className="flex flex-col-reverse md:grid grid-cols-2 gap-5">
         {/* <div className='w-full md:w-1/2 mx-auto'> */}
-        <GallerySlider />
+        {/* {therapyData.map((list:any)=> console.log(list)
+        )} */}
+          <GallerySlider therapy={therapyData.gallery} />
         {/* </div> */}
-        <div className="px-4 font-Lato text-base tracking-tight space-y-3 w-full">
-          <p>
+        <div className="px-4 font-Lato text-base tracking-tight space-y-3 w-full prose prose-xl prose-blue prose-li:marker:text-[#9544c3]">
+          <PortableText value={therapyData.content}/>
+          {/* <p>
             Therapy is a transformative tool that can empower you to navigate
             life's challenges with resilience and authenticity.
           </p>
@@ -33,10 +49,10 @@ const Therapy = () => {
               Gain Clarity: Explore your thoughts and emotions, gaining fresh
               insights into your life, relationships, and personal patterns.
             </li>
-          </ul>
+          </ul> */}
         </div>
       </div>
-    </Element>
+    </section>
   );
 };
 
