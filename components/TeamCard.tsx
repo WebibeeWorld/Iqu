@@ -29,8 +29,8 @@ const TeamCard = ({data}:{data : TeamType}) => {
         </div>
       </CardHeader>
       <Divider className="bg-white"/>
-      <CardFooter className="text-base">
-        <p className="font-Lato">{data.shortNote}</p>
+      <CardFooter className="text-base ">
+        <p className="font-Lato line-clamp-2">{data.shortNote}</p>
       </CardFooter>
     </Card>
   );

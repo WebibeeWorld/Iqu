@@ -66,7 +66,7 @@ const Hero = () => {
           <p className="font-urbanist text-xs md:text-sm md:mt-1 px-1.5">
             based on{" "}
             <span className="underline">
-              <Link href={"#"}>1024 reviews</Link>
+              <Link href={"https://www.practo.com/Chennai/doctor/s-ananthi-psychologist/recommended"} target="_blank">52 reviews</Link>
             </span>
           </p>
         </div>
@@ -86,10 +86,13 @@ const Hero = () => {
         </h4>
       </div>
       <Button
+      as={Link}
         color="success"
         size="lg"
         radius="full"
         className="px-5 font-Lato font-semibold text-base md:text-lg text-white"
+        target="_blank"
+        href="https://www.practo.com/Chennai/doctor/s-ananthi-psychologist"
       >
         Book a Consultation{" "}
       </Button>

@@ -1,7 +1,8 @@
 "use client";
 // import { TherapyIcon } from "@/svg-components/therapyIcon";
-import { Card, CardHeader, Image } from "@nextui-org/react";
+import { Card, CardBody, CardHeader } from "@nextui-org/react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 // import Image from "next/image";
 
 export const TOTCard = ({
@@ -34,29 +35,19 @@ export const TOTCard = ({
       viewport={{ once: true }}
     >
       <Card className="w-full md:w-[280px] rounded-md p-1.5">
-        <CardHeader className="justify-between ">
+        <CardBody className="justify-between ">
           <div className="flex items-center gap-4">
-            {/* <TherapyIcon className={"w-10 h-10"} /> */}
-            {/* <Avatar
-            radius="full"
-            size="lg"
-            src="/coloricon.svg"
-          /> */}
-            {/* <div className="relative w-8 h-8 ">
-            <Image fill alt="svg icon" src={"/coloricon.svg"} className="object-contain"/>
-          </div> */}
             <Image
-              alt="nextui logo"
-              height={40}
-              // radius="sm"
+              alt="logo"
               src="/coloricon.png"
               width={40}
+              height={40}
             />
-            <p className="text-base font-semibold leading-none text-default-600">
+            <p className="text-base font-semibold leading-none text-default-600 line-clamp-2">
               {list.title}
             </p>
           </div>
-        </CardHeader>
+        </CardBody>
       </Card>
     </motion.div>
   );

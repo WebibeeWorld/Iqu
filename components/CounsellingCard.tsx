@@ -14,7 +14,7 @@ const CounsellingCard = ({service} : {service : ServiceType}) => {
   return (
     <Card className="max-w-[300px] max-h-fit md:!max-w-md p-3 first:ms-5 bg-primary text-white"> 
       <CardHeader>
-        <h4 className="text-lg md:text-xl font-semibold leading-none font-Montserrat">
+        <h4 className="text-lg md:text-xl font-semibold leading-none font-Montserrat line-clamp-1">
           {service.title}
         </h4>
       </CardHeader>
@@ -24,7 +24,7 @@ const CounsellingCard = ({service} : {service : ServiceType}) => {
             <li>Email Support between Sessions</li>
             <li>Access to Self-Help Resources</li>
         </ul> */}
-        <p className="font-Lato text-base">
+        <p className="font-Lato text-base line-clamp-2">
            {service.smallDescription}
         </p>
       </CardBody>

@@ -6,12 +6,12 @@ const TestimonialCard = ({ list }: { list: TestimonialType }) => {
   return (
     <Card className="max-w-[280px] min-h-[320px] md:!max-w-md p-3 first:ms-5 bg-primary  text-white">
       <CardHeader className="justify-start">
-        <h4 className="text-lg md:text-xl font-semibold leading-none font-Montserrat">
+        <h4 className="text-lg md:text-xl font-semibold leading-none font-Montserrat line-clamp-1">
           {list.userName}
         </h4>
       </CardHeader>
       <CardBody className="px-3 py-0 h-auto">
-        <p className="font-Lato text-base tracking-tight">
+        <p className="font-Lato text-base tracking-tight line-clamp-6">
         {list.review}
         </p>
       </CardBody>
