@@ -1,5 +1,4 @@
 "use client";
-import { TOTCard } from "@/components/TOTCard";
 import { thearpies } from "@/constants";
 import { Button, Pagination } from "@nextui-org/react";
 import React from "react";
@@ -9,10 +8,6 @@ export default function page() {
   const firstPage = page * 10 - 10;
   const lastPage = page * 10;
   const classNames = {
-    // wrapper: "gap-3 overflow-visible h-14 rounded bg-primary p-3 rounded-md",
-    // item: "w-8 h-8 rounded-md bg-transparent border border-black text-lg",
-    // next: "bg-success font-semibold data-hover:bg-opacity-50",
-    // prev: "bg-success font-semibold  data-hover:bg-opacity-50",
     cursor: "shadow-lg text-white font-semibold ",
   };
   return (
@@ -34,9 +29,9 @@ export default function page() {
       </Button>
       {/* max-h-[340px] md:max-h-[540px] */}
       <div className="sticky top-5 w-full h-full md:w-[80%] mx-auto shadow-2xl bg-primary p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 rounded-lg gap-5 place-items-center">
-        {thearpies.slice(firstPage, lastPage).map((types, idx) => (
+        {/* {thearpies.slice(firstPage, lastPage).map((types, idx) => (
           <TOTCard type={types} key={idx} index={idx} />
-        ))}
+        ))} */}
       </div>
       <div className="w-full flex flex-col sm:flex-row justify-center items-center gap-5 py-2">
         <Button

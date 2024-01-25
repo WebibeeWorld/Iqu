@@ -2,7 +2,13 @@
 import React from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import { Element } from "react-scroll";
-const FAQ = () => {
+
+ type faqType = {
+  question : string,
+  answer : string
+}
+
+const FAQ = ({faq}:{faq : faqType[]}) => {
   return (
     <Element className="p-6 md:p-10 lg:p-[60px] space-y-4" name="FAQ">
       <h3 className="capitalize text-3xl md:text-5xl w-full mx-auto tracking-wide font-Montserrat font-bold text-center p-4">
@@ -10,35 +16,19 @@ const FAQ = () => {
       </h3>
       <div className="w-full">
         <Accordion variant="splitted">
+          {faq.map((list : faqType, idx : number)=>(
           <AccordionItem
-            key="1"
-            aria-label="Accordion 1"
-            title="What types of therapy do you offer?"
+            key={idx}
+            aria-label={list.question}
+            title={list.question}
           >
-            {
-              "We provide a range of therapeutic services tailored to meet individual needs. Our experienced therapists offer psychotherapy, cognitive-behavioral therapy (CBT), dialectical behavior therapy (DBT), and mindfulness-based approaches. We believe in a personalized approach to address various mental health concerns."
-            }
+            {list.answer}
           </AccordionItem>
-          <AccordionItem
-            key="2"
-            aria-label="Accordion 2"
-            title="How do I schedule an appointment"
-          >
-            {
-              "Scheduling an appointment is easy! You can either call our office during business hours or use our online appointment request form. Our friendly staff will assist you in finding a convenient time for your initial consultation. We strive to accommodate your schedule and get you started on your journey towards mental well-being."
-            }
-          </AccordionItem>
+          ))}
         </Accordion>
       </div>
     </Element>
   );
 };
-
-// type FeatureItem = {
-//   title: string;
-//   icon: string;
-//   description: string;
-//   slug:string;
-// }
 
 export default FAQ;

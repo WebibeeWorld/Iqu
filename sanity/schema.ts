@@ -5,7 +5,8 @@ import { TestimonialSchema } from './TestimonialSchema'
 import { BenefitsOfTherapySchema } from './BenefitsOfTherapySchema'
 import { MissionVisionSchema } from './MissionVisionSchema'
 import { FAQSchema } from './FAQSchema'
+import { TOTSchema } from './TOTSchema'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [TeamSchema,HeadTeam,ServiceSchema,TestimonialSchema,BenefitsOfTherapySchema,MissionVisionSchema,FAQSchema],
+  types: [TeamSchema,HeadTeam,ServiceSchema,TestimonialSchema,BenefitsOfTherapySchema,MissionVisionSchema,FAQSchema,TOTSchema],
 }

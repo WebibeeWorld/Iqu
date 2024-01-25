@@ -6,7 +6,11 @@ import { useRouter } from "next/navigation";
 import { thearpies } from "@/constants";
 import { Element } from "react-scroll";
 
-export const TOT = () => {
+type TherapyType ={
+  title : string
+}
+
+export const TOT = ({types} :{types : TherapyType[]}) => {
   const router = useRouter()
   
   return (
@@ -19,8 +23,8 @@ export const TOT = () => {
         challenges with resilience and authenticity.
       </p>
       <div className="w-full h-full md:w-[80%] mx-auto shadow-2xl bg-primary p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 rounded-lg gap-5 place-items-center" >
-        {thearpies.slice(0,9).map((types,idx) =>(
-          <TOTCard type={types} key={idx} index={idx}/>
+        {types.slice(0,9).map((list : TherapyType,idx : number) =>(
+          <TOTCard list={list} key={idx} index={idx}/>
         ))}
       </div>
       <Button color="success" size="lg" radius="full" className="mx-auto font-Montserrat font-semibold text-xl text-white" onClick={() => router.push("/typesoftherapy")}>View More</Button>
