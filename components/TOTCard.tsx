@@ -1,15 +1,13 @@
 "use client";
-// import { TherapyIcon } from "@/svg-components/therapyIcon";
 import { Card, CardBody, CardHeader } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-// import Image from "next/image";
 
 export const TOTCard = ({
   list,
   index,
 }: {
-  list: { title: string };
+  list:  string,
   index: number;
 }) => {
   const variants = {
@@ -44,7 +42,7 @@ export const TOTCard = ({
               height={40}
             />
             <p className="text-base font-semibold leading-none text-default-600 line-clamp-2">
-              {list.title}
+              {list}
             </p>
           </div>
         </CardBody>

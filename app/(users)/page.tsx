@@ -6,6 +6,7 @@ import { TeamServer } from "@/components/layout/TeamServer";
 import { CounsellingServiceServer } from "@/components/layout/CounsellingServiceServer";
 import { TestimonialServer } from "@/components/layout/TestimonialServer";
 import { TypesOfTherapyServer } from "@/components/layout/TypesOfTherapyServer";
+import { KnowMoreServer } from "@/components/layout/KnowMoreServer";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
       <TypesOfTherapyServer />
       <TeamServer />
       <Mission_vision />
-      <KnowMore />
+      <KnowMoreServer />
     </>
   );
 }
