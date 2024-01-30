@@ -14,13 +14,14 @@ const FAQ = ({faq}:{faq : faqType[]}) => {
       <h3 className="capitalize text-3xl md:text-5xl w-full mx-auto tracking-wide font-Montserrat font-bold text-center p-4">
         FAQ
       </h3>
-      <div className="w-full">
+      <div className="w-full mx-auto md:px-32">
         <Accordion variant="splitted">
           {faq.map((list : faqType, idx : number)=>(
           <AccordionItem
             key={idx}
             aria-label={list.question}
             title={list.question}
+           
           >
             {list.answer}
           </AccordionItem>
