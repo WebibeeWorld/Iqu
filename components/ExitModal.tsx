@@ -44,8 +44,8 @@ const ExitModal = () => {
         radius="lg"
         classNames={{
           wrapper:"!flex !justify-center !items-center",
-          backdrop: "bg-white/90 backdrop-opacity-40",
-          base: "text-white bg-primary",
+          backdrop: "bg-black/80 backdrop-opacity-40",
+          base: "text-white bg-success",
           body: "!py-1",
           header: "w-full ",
           footer: "w-full",
@@ -53,7 +53,7 @@ const ExitModal = () => {
         }}
       >
         <ModalContent>
-            <ModalHeader className="flex  justify-center items-center font-Montserrat font-bold text-[26px]">
+            <ModalHeader className="flex capitalize justify-center items-center font-Montserrat font-bold text-[26px]">
               Thanks for visiting IQU
             </ModalHeader>
             <ModalBody>
@@ -69,7 +69,7 @@ const ExitModal = () => {
               </form>
             </ModalBody>
             <ModalFooter className="justify-center items-center">
-              <Button color="success" size="lg" radius="full" className="font-Lato font-semibold text-white text-lg">
+              <Button color="secondary" size="lg" radius="full" className="font-Lato font-semibold text-black text-lg">
                 Subscribe
               </Button>
             </ModalFooter>

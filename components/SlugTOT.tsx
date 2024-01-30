@@ -40,13 +40,13 @@ const SlugTOT = ({desc,types,pdfFile}:{desc: string,types:string[],pdfFile:strin
         <Button
           variant="faded"
           onPress={() => setPage((prev) => (prev > 1 ? prev - 1 : prev))}
-          className="hidden sm:block bg-primary text-white p-2"
+          className="hidden sm:block bg-success text-white p-2"
         >
           Prev
         </Button>
         <Pagination
           size="lg"
-          color="primary"
+          color="success"
           variant="faded"
           total={Math.round(types.length / 9)}
           initialPage={1}
@@ -57,7 +57,7 @@ const SlugTOT = ({desc,types,pdfFile}:{desc: string,types:string[],pdfFile:strin
         <Button
           variant="faded"
           onPress={() => setPage((prev) => (prev < types.length / 9 ? prev + 1 : prev))}
-          className="hidden sm:block bg-primary text-white p-2"
+          className="hidden sm:block bg-success text-white p-2"
         >
           Next
         </Button>

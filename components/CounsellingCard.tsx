@@ -12,7 +12,7 @@ import { useRouter } from "next/navigation";
 const CounsellingCard = ({service} : {service : ServiceType}) => {
   const router = useRouter()
   return (
-    <Card className="max-w-[300px] max-h-fit md:!max-w-md p-3 first:ms-5 bg-primary text-white"> 
+    <Card className="max-w-[300px] max-h-fit md:!max-w-md p-3 first:ms-5 bg-success text-white"> 
       <CardHeader>
         <h4 className="text-lg md:text-xl font-semibold leading-none font-Montserrat line-clamp-1">
           {service.title}
@@ -29,7 +29,7 @@ const CounsellingCard = ({service} : {service : ServiceType}) => {
         </p>
       </CardBody>
       <CardFooter className="gap-3">
-        <Button radius="full" color="success" className="capitalize font-lato text-base text-white font-semibold" onClick={()=>router.push(`/services/${service.currentSlug}`)}>Know More</Button>
+        <Button radius="full" color="secondary" className="capitalize font-lato text-base text-black font-semibold" onClick={()=>router.push(`/services/${service.currentSlug}`)}>Know More</Button>
       </CardFooter>
     </Card>
   );

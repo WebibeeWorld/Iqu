@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const TeamHeadCard = ({head}:{head : HeadType}) => {
   return (
-    <Card shadow="sm" className="w-full bg-primary">
+    <Card shadow="sm" className="w-full bg-success">
       <CardBody className="overflow-visible p-0 relative w-full h-[240px]">
         <Image
           fill

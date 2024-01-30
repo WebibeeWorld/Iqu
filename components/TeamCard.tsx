@@ -6,7 +6,7 @@ import { TeamType } from "@/sanity/lib/type";
 
 const TeamCard = ({data}:{data : TeamType}) => {
   return (
-    <Card shadow="sm" className="w-[260px] md:w-[320px] first:ms-5 bg-primary text-white">
+    <Card shadow="sm" className="w-[260px] md:w-[320px] first:ms-5 bg-success text-white">
       <CardHeader className="flex items-start gap-5">
         {/* <Image
           alt="nextui logo"

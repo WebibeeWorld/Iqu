@@ -19,7 +19,7 @@ export default function FloatingButton() {
           loading="lazy"
           alt="msg"
           className="rounded-full p-2 shadow-xl"
-          style={{ boxShadow: "0 0 0 2px #f9e062" }}
+          style={{ boxShadow: "0 0 0 2px #9544c3" }}
           whileHover={{ boxShadow: "0 0 0 2px #ffffff" }}
         />
       </a>

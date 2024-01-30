@@ -4,7 +4,7 @@ import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/react";
 
 const TestimonialCard = ({ list }: { list: TestimonialType }) => {
   return (
-    <Card className="max-w-[280px] min-h-[320px] md:!max-w-md p-3 first:ms-5 bg-primary  text-white">
+    <Card className="max-w-[280px] min-h-[320px] md:!max-w-md p-3 first:ms-5 bg-success  text-white">
       <CardHeader className="justify-start">
         <h4 className="text-lg md:text-xl font-semibold leading-none font-Montserrat line-clamp-1">
           {list.userName}

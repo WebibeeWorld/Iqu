@@ -69,9 +69,10 @@ module.exports = {
       light: {
         colors: {
           primary: "#9544c3",
-          secondary: "#f9e062",
+          secondary: "#FCD12A",
           success :"#466f3a",
           warning : "#8adbfb",
+          default:"#ffffff"
         }
       },
     },

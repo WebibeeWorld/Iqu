@@ -87,10 +87,10 @@ const Hero = () => {
       </div>
       <Button
       as={Link}
-        color="success"
+        color="primary"
         size="lg"
         radius="full"
-        className="px-5 font-Lato font-semibold text-base md:text-lg text-white"
+        className="px-16 py-4 font-Lato font-bold text-base md:text-lg text-white"
         target="_blank"
         href="https://www.practo.com/Chennai/doctor/s-ananthi-psychologist"
       >
