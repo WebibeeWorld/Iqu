@@ -7,11 +7,16 @@ export const TOTSchema = {
         name: "smallDescription",
         type: "string",
         title: "Small Description",
+        validation: (Rule:any) => [
+          Rule.required().min(3).error('A Description of min. 3 characters is required'),
+          Rule.max(100).warning('Shorter Description are usually better')
+        ]
       },
       {
         name: "pdf",
         type: "file",
         title: "PDF File Upload",
+        validation: (Rule:any) => Rule.required().max(1),
         options : {
           accept: ".pdf"
         }
@@ -20,13 +25,14 @@ export const TOTSchema = {
         name: "types",
         type: "array",
         title: "Therapy Types",
+        validation: (Rule:any) => Rule.required(),
         of: [
           {
             type: "string",
+            validation: (Rule:any) => Rule.required()
           },
         ],
       },
     ],
-    validation: (Rule : any) => Rule.required(),
   };
   

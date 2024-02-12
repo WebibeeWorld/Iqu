@@ -7,11 +7,11 @@ export const KnowMoreSchema = {
         name: "video",
         type: "file",
         title: "Video Upload",
+        validation: (Rule:any) => Rule.required(),
         options : {
           accept: "video/*"
         }
       }
     ],
-    validation: (Rule : any) => Rule.required(),
   };
   

@@ -7,31 +7,37 @@ export const ServiceSchema = {
           name: "title",
           type: "string",
           title: "Service Name",
+          validation: (Rule:any) => Rule.required(),
         },
         {
           name: "smallDescription",
           type: "string",
           title: "Small Description",
+          validation: (Rule:any) => Rule.required(),
         },
         {
           name: "mainDescription",
           type: "string",
           title: "Main Description",
+          validation: (Rule:any) => Rule.required(),
         },
         {
           name: "para1",
           type: "string",
           title: "paragraph 1",
+          validation: (Rule:any) => Rule.required(),
         },
         {
           name: "para2",
           type: "text",
           title: "paragraph 2",
+          validation: (Rule:any) => Rule.required(),
         },
         {
           name: 'serviceImage',
           type: 'image',
           title: 'Service Image',
+          validation: (Rule:any) => Rule.required(),
           options: {
             hotspot: true
           },
@@ -40,6 +46,7 @@ export const ServiceSchema = {
               name: 'caption',
               type: 'string',
               title: 'Caption',
+              validation: (Rule:any) => Rule.required(),
             },
           ]
         },
@@ -47,6 +54,7 @@ export const ServiceSchema = {
             name: "slug",
             type: "slug",
             title: "Slug",
+            validation: (Rule:any) => Rule.required(),
             options: {
                 source: 'title',
                 maxLength: 50,
