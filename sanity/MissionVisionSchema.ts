@@ -7,6 +7,7 @@ export const MissionVisionSchema = {
         name: "description",
         type: "string",
         title: "Description",
+        validation: (Rule:any) => Rule.required(),
       },
     ],
   };

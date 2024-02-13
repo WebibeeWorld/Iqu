@@ -55,21 +55,25 @@ export const HeadTeam ={
           name: "name",
           type: "string",
           title: "Name",
+          validation: (Rule:any) => Rule.required(),
         },
         {
           name: "designation",
           type: "string",
           title: "Designation",
+          validation: (Rule:any) => Rule.required(),
         },
         {
           name: "description",
           type: "text",
           title: "Description",
+          validation: (Rule:any) => Rule.required().min(3).error('A description of min. 3 characters is required'),
         },
         {
           name: 'dean',
           type: 'image',
           title: 'Dean',
+          validation: (Rule:any) => Rule.required(),
           options: {
             hotspot: true
           },
@@ -78,6 +82,7 @@ export const HeadTeam ={
               name: 'caption',
               type: 'string',
               title: 'Caption',
+              validation: (Rule:any) => Rule.required(),
             },
           ]
         },

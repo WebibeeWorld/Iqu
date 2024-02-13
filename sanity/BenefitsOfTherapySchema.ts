@@ -7,6 +7,7 @@ export const BenefitsOfTherapySchema = {
       name: "gallery",
       type: "array",
       title: "Gallery",
+      validation: (Rule:any) => Rule.required(),
       of: [
         {
           type: "image",
@@ -17,6 +18,7 @@ export const BenefitsOfTherapySchema = {
       name: "content",
       type: "array",
       title: "Content",
+      validation: (Rule:any) => Rule.required(),
       of: [
         {
           type: "block",
