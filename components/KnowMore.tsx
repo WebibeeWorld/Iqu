@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import ReactPlayer from "react-player/lazy";
-// import { FaCirclePlay } from "react-icons/fa6";
-
+// @ts-ignore
+import HoverVideoPlayer from "react-hover-video-player";
+import { FaPlayCircle } from "react-icons/fa";
 export default function KnowMore({ videoFile }: { videoFile: string }) {
   return (
     <section
@@ -31,15 +31,21 @@ export default function KnowMore({ videoFile }: { videoFile: string }) {
         {/* <video muted controls autoPlay className="w-full h-full md:w-[640px] lg:w-[640px] md:h-[360px] rounded-lg">
          <source src={videoFile} type="video/mp4"/>
          </video> */}
-        <ReactPlayer
-          url={videoFile}
+        <HoverVideoPlayer
           loop
-          playing={true}
-          controls
-          muted
+          videoSrc={videoFile}
+          pausedOverlay={
+            <div className="w-full h-full flex justify-center items-center">
+              <FaPlayCircle className="text-white h-8 w-8 md:h-12 md:w-12 block" />
+            </div>
+          }
           width="100%"
           height="100%"
-          className="w-full h-full md:!w-[640px] lg:!w-[640px] md:!h-[360px] rounded-lg"
+          muted={false}
+          className="cursor-pointer w-full h-full md:!w-[640px] lg:!w-[640px] md:!h-[360px] rounded-lg"
+          controls
+          // Disable both the download and fullscreen buttons
+          controlsList="nodownload nofullscreen"
         />
       </div>
     </section>

@@ -10,7 +10,7 @@ export default function FloatingButton() {
       whileHover={{ scale: 1.1 }}
     >
       <a
-        href="https://web.whatsapp.com/send?phone=9500021585&text=Hey. I want to schedule a consulation today."
+        href="https://wa.me/9500021585?text=Greetings.%20I%want%20to%20schedule%20an%20appointment%20!"
         target="_blank"
         rel="noopener noreferrer"
       >

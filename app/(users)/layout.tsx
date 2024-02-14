@@ -14,8 +14,8 @@ import DefaultNavbvar from "@/components/DefaultNavbvar";
 import { FAQServer } from "@/components/layout/FAQServer";
 
 export const metadata: Metadata = {
-  title: "IQU Clinic",
-  description: "Therapy & Counseling Center",
+  title: "IQU Clinic | A Counseling And Therapy Center",
+  description: "You Deserve A Better Life",
 };
 
 const montserrat = Montserrat({

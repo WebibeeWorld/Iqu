@@ -1,5 +1,5 @@
 "use client";
-import { Card, CardBody, CardHeader } from "@nextui-org/react";
+import { Card, CardBody } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -32,9 +32,9 @@ export const TOTCard = ({
       custom={index}
       viewport={{ once: true }}
     >
-      <Card className="w-full md:w-[280px] rounded-md p-1.5">
+      <Card className="w-[280px]  md:w-[280px] rounded-md p-1.5">
         <CardBody className="justify-between ">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4  line-clamp-1">
             <Image
               alt="logo"
               src="/coloricon.png"
