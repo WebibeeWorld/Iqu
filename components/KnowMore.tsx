@@ -36,7 +36,7 @@ export default function KnowMore({ videoFile }: { videoFile: string }) {
           videoSrc={videoFile}
           pausedOverlay={
             <div className="w-full h-full flex justify-center items-center">
-              <FaPlayCircle className="text-white h-8 w-8 md:h-12 md:w-12 block" />
+              <FaPlayCircle className="text-white h-8 w-8 md:h-12 md:w-12 hidden md:block" />
             </div>
           }
           width="100%"
