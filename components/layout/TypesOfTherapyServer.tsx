@@ -14,13 +14,14 @@ async function getTypes() {
 
 export const TypesOfTherapyServer = async () => {
   const therapyType = await getTypes();
-  return <TOT desc={therapyType.smallDescription}  types={therapyType.types} />;
+  // await console.log("types data",therapyType)
+  return <TOT desc={therapyType?.smallDescription}  types={therapyType?.types} />;
 };
 
 
 export const SlugTOTServer = async () => {
   const therapyType = await getTypes();
   return (
-    <SlugTOT desc={therapyType.smallDescription}  types={therapyType.types} pdfFile={therapyType.pdfFile} />
+    <SlugTOT desc={therapyType?.smallDescription}  types={therapyType?.types} pdfFile={therapyType?.pdfFile} />
   )
 }

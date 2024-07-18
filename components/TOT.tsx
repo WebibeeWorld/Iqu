@@ -26,7 +26,7 @@ export const TOT = ({ desc, types }: { desc: string; types: string[] }) => {
       </p>
       <div className="relative w-full h-full md:w-[80%] mx-auto shadow-2xl bg-primary p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 rounded-lg gap-5 place-items-center">
         {types
-          .slice(0, width >= 600 ? 9 : 5)
+          ?.slice(0, width >= 600 ? 9 : 5)
           .map((list: string, idx: number) => (
             <TOTCard list={list} key={idx} index={idx} />
           ))}
