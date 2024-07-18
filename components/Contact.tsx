@@ -69,7 +69,7 @@ export default function Contact() {
           <div key={i} className="w-full h-full p-6 md:p-10 lg:p-[60px]">
             <h4 className="relative flex-col font-Montserrat text-lg font-bold bg-primary text-white flex text-center items-center gap-3 p-3 justify-center">
               <span className="absolute left-4 top-2">
-                <FaMagnifyingGlassLocation className="w-7 h-7" />
+                <FaMagnifyingGlassLocation className="w-7 h-7 hidden md:block" />
               </span>
               {b.name}
               <h5>{b.place}{b.landmark}</h5>
