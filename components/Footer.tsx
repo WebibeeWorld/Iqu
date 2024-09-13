@@ -19,7 +19,7 @@ const Footer = () => {
           <div className="mx-auto">
           <Link href="/" className="flex items-center gap-2">
             <Image src="/logo.png" alt="logo" width={40} height={40} />
-            <h4 className="font-Montserrat text-lg lg:text-2xl font-bold">IQU Clinic</h4>
+            <h4 className="font-Montserrat text-lg lg:text-2xl font-bold">iQu Clinic Healthcare</h4>
           </Link>
           <div className="flex items-center gap-2 justify-center mt-1">
             <FaInstagram className="w-6 h-6 text-primary cursor-pointer hover:opacity-60" />

@@ -68,11 +68,11 @@ module.exports = {
     themes: {
       light: {
         colors: {
-          primary: "#9544c3",
-          secondary: "#FCD12A",
-          success :"#466f3a",
-          warning : "#8adbfb",
-          default:"#ffffff"
+          primary: "#b970f2", // Adjusted purple to a deeper shade
+          secondary: "#f7e683", // Adjusted yellow to a warmer tone
+          success: "#8cbd73", // Adjusted green to a vibrant shade
+          warning: "#FFEB3B", // Adjusted warning to a brighter yellow
+          default: "#FFFFFF" // Keeping white as default
         }
       },
     },

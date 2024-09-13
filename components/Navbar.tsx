@@ -30,7 +30,7 @@ export default function Header() {
             <Link href="/" className="flex items-center gap-3">
               <Image src="/logo.png" alt="logo" width={40} height={40} />
               <h3 className="block md:hidden lg:block font-Montserrat font-bold text-lg lg:text-2xl">
-                IQU Clinic
+                iQu Clinic Healthcare
               </h3>
             </Link>
             {/* <div className="flex items-center gap-4"> */}

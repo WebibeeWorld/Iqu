@@ -14,7 +14,7 @@ import DefaultNavbvar from "@/components/DefaultNavbvar";
 import { FAQServer } from "@/components/layout/FAQServer";
 
 export const metadata: Metadata = {
-  title: "IQU Clinic | A Counseling And Therapy Center",
+  title: "iQu Clinic Healthcare | A Counseling And Therapy Center",
   description: "You Deserve A Better Life",
 };
 

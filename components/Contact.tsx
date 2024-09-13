@@ -10,14 +10,14 @@ export default function Contact() {
       name: "Kilpauk Branch",
       map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.3443650182753!2d80.23724087430463!3d13.077348312552546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526726dd4c0ab5%3A0xa483117f65ca66fd!2sCalve%20Chateau!5e0!3m2!1sen!2sin!4v1721299357331!5m2!1sen!2sin",
       landmark: "Nilgiris Backside near Ega theatre",
-      place:"7B, 7th floor B block: "
+      place:"7B, 7th floor,Calve Chateau, B-block"
 
     },
     {
       name: "Thirumulaivoyal Branch",
       map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.299765180512!2d80.12660387430567!3d13.14348191108817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5262e84a6eedab%3A0x4ac8f347128955b4!2s7%2C%20Anna%20Main%20Rd%2C%20SVT%20Nagar%2C%20Venkateswara%20Nagar%2C%20Thirumullaivoyal%2C%20Chennai%2C%20Tamil%20Nadu%20600062!5e0!3m2!1sen!2sin!4v1721299418405!5m2!1sen!2sin",
-      landmark: "MRK Store",
-      place:""
+      landmark: "Near MRK Store",
+      place:"7 Anna Main Rd, SS Nagar extension"
 
     },
   ];
@@ -55,11 +55,12 @@ export default function Contact() {
         <div>
           <div className="font-Montserrat text-lg font-bold flex items-center gap-8 p-3 justify-center bg-success text-white tracking-widest rounded-md  my-10">
             <div className="font-Lato font-semibold space-y-4 block ">
-              <h4 className="text-lg md:text-2xl">9876543212</h4>
+              <h4 className="text-lg md:text-2xl">(+91) 6380654528
+              </h4>
               <div className="flex justify-center">
                 <FaPhoneVolume className="w-7 h-7 animate-bounce" />
               </div>
-              <h4 className="text-lg md:text-2xl">9876543212</h4>
+              <h4 className="text-lg md:text-2xl">(+91) 7695845955</h4>
             </div>
           </div>
         </div>
@@ -72,7 +73,8 @@ export default function Contact() {
                 <FaMagnifyingGlassLocation className="w-7 h-7 hidden md:block" />
               </span>
               {b.name}
-              <h5>{b.place}{b.landmark}</h5>
+              <h5>{b.place}</h5>
+              <h6>Landmark: {b.landmark}</h6>
             </h4>
             <iframe
               src={b.map}
