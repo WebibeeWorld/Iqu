@@ -11,6 +11,7 @@ import { KnowMoreServer } from "@/components/layout/KnowMoreServer";
 export default function Home() {
   return (
     <>
+       
       <Hero />
       <CounsellingServiceServer />
       <TestimonialServer />

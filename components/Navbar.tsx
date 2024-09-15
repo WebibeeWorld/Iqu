@@ -19,6 +19,10 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
+    <>
+      <div style={{ position: 'sticky', top: 0, padding: '10px', textAlign: 'center' }} className="font-bold bg-primary text-white font-xl">
+        This website is under development
+      </div>
     <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="full" position="sticky">
       <NavbarContent>
         <NavbarMenuToggle
@@ -99,5 +103,7 @@ export default function Header() {
         </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
+    </>
+
   );
 }
