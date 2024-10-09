@@ -15,7 +15,7 @@ const SlugTOT = ({desc,types,pdfFile}:{desc: string,types:string[],pdfFile:strin
   return (
     <section className="p-6 md:p-10 lg:p-[60px] space-y-3 md:space-y-4 w-full h-full relative">
       <h3 className="capitalize text-3xl md:text-6xl w-full mx-auto tracking-wide font-Montserrat font-bold text-center">
-        Types Of Therapy
+        Types of Counselling
       </h3>
       <p className="font-Lato font-normal tracking-normal leading-relaxed w-full text-center !mb-5">
         {desc}

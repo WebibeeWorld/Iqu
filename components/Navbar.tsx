@@ -97,7 +97,7 @@ export default function Header() {
               className="btn capitalize cursor-pointer font-Lato font-semibold text-lg hover:opacity-50"
               onClick={() => setIsMenuOpen(false)}
             >
-              Types of Therapy
+              Types of Counselling
             </h4>
           </Link>
         </NavbarMenuItem>

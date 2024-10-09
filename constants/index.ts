@@ -3,7 +3,7 @@ export const NAV_LINKS = [
   { href: '/', key: 'services', label: 'services' },
   { href: '/', key: 'testimonial', label: 'Testimonial ' },
   { href: '/', key: 'BOT', label: 'Benefits Of Therapy' },
-  { href: '/', key: 'therapy', label: 'Types of Therapy' },
+  { href: '/', key: 'therapy', label: 'Types of Counselling' },
   { href: '/', key: 'FAQ', label: 'FAQ' },
 ];
 

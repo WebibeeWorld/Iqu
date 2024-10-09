@@ -19,7 +19,7 @@ export const TOT = ({ desc, types }: { desc: string; types: string[] }) => {
       name="therapy"
     >
       <h3 className="capitalize text-3xl md:text-5xl w-full mx-auto tracking-wide font-Montserrat font-bold text-center">
-        Types of Therapy
+        Types of Counselling
       </h3>
       <p className="font-Lato font-normal tracking-normal leading-relaxed w-full text-center">
         {desc}

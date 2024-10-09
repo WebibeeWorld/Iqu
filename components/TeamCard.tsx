@@ -24,8 +24,8 @@ const TeamCard = ({data}:{data : TeamType}) => {
         <div className="flex flex-col font-Lato font-medium">
           <p className="font-Montserrat font-semibold text-lg md:text-2xl">{data.name}</p>
           <p className="text-base font-Lato font-normal">{data.designation}</p>
-          <p className="text-base font-Lato font-normal">{data.role}</p>
-          <p className="text-base font-Lato font-normal">{data.speciality}</p>
+          {/* <p className="text-base font-Lato font-normal">{data.role}</p>
+          <p className="text-base font-Lato font-normal">{data.speciality}</p> */}
         </div>
       </CardHeader>
       <Divider className="bg-white"/>

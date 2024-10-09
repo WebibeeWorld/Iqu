@@ -7,7 +7,7 @@ import { Link as MyLink } from "react-scroll";
 
 const NavLink = [
   { label: "Home", href: "/" },
-  { label: "Types of Therapy", href: "/typesoftherapy" },
+  { label: "Types of Counselling", href: "/typesoftherapy" },
 ];
 
 const Footer = () => {

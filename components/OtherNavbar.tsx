@@ -90,7 +90,7 @@ const OtherNavbar = () => {
               className="btn capitalize cursor-pointer font-Lato font-semibold text-lg"
               onClick={() => setIsMenuOpen(false)}
             >
-              Types of Therapy
+              Types of Counselling
             </h4>
           </Link>
         </NavbarMenuItem>

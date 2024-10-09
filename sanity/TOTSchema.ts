@@ -1,7 +1,7 @@
 export const TOTSchema = {
     name: "typesOfTherapy",
     type: "document",
-    title: "Types Of Therapy",
+    title: "Types of Counselling",
     fields: [
       {
         name: "smallDescription",
