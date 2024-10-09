@@ -14,12 +14,12 @@ export default function Home() {
        
       <Hero />
       <CounsellingServiceServer />
-      <TestimonialServer />
+      {/* <TestimonialServer /> */}
       <Therapy />
       <TypesOfTherapyServer />
       <TeamServer />
       <Mission_vision />
-      <KnowMoreServer />
+      {/* <KnowMoreServer /> */}
     </>
   );
 }
