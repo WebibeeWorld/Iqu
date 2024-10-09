@@ -12,11 +12,11 @@ export default function Team({teams,head} : {teams : TeamType[],head : HeadType}
         Meet The Team
       </h3>
       <div className="space-y-3">
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-5  items-center">
         <TeamHeadCard head={head}/>
-        <p className="font-Lato text-base tracking-tight text-justify">
+        <div className="font-Lato text-base md:text-xl tracking-tight text-justify">
           {head.description}
-        </p>
+        </div>
         </div>
         <Marquee pauseOnHover speed={70} autoFill={true}>
           <div className="flex items-center gap-5 w-full h-full py-5">

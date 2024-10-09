@@ -11,7 +11,7 @@ const TeamHeadCard = ({head}:{head : HeadType}) => {
         <Image
           fill
           alt={head.caption}
-          className="object-cover object-center"
+          className="object-contain object-center mt-2"
           src={urlForImage(head.dean)}
           sizes="(min-width: 780px) calc(49.1vw - 43px), calc(100vw - 48px)"
           placeholder="blur"
